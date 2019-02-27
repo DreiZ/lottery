@@ -1,0 +1,53 @@
+//
+//  PrefixHeader.pch
+//  lottery
+//
+//  Created by zzz on 2018/6/26.
+//  Copyright © 2018年 zzz. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+#import "UIView+Radio.h"
+#import "NSObject+Hint.h"
+#import "UIView+Radio.h"
+#import "DataWorkManager.h"
+#import <NSString+YYAdd.h>
+#import "ZPublicManager.h"
+#import "Const.h"
+#import <YYKit.h>
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTabBarMoreHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?24:0)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+
+
+#pragma mark -  颜色区
+//主题色
+#define KMainColor [UIColor colorWithHexString:@"ff3d6f"]
+#define KMainSubColor [UIColor colorWithHexString:@"ffd0dc"]
+//导航栏颜色
+#define CNavBgColor  [UIColor colorWithHexString:@"ffffff"]
+//#define CNavBgColor  [Ulor colorWithHexString:@"ffffff"]
+#define CNavBgFontColor  [UIColor colorWithHexString:@"000000"]
+
+//默认页面背景色
+#define KBackColor [UIColor colorWithHexString:@"f3f3f3"]
+//默认内容页面背景色
+#define KContentBackColor [UIColor colorWithHexString:@"e8e8e8"]
+
+//分割线颜色
+#define CLineColor [UIColor colorWithHexString:@"999999"]
+
+#define UnitWidth  (1/36.0f)
+#define cellHeight  (30.0f)
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
