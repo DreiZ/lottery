@@ -111,6 +111,13 @@
     return ok;
 }
 
+- (BOOL)deleteAllLottery
+{
+    NSString *sqlString = [NSString stringWithFormat:SQL_DELETE_LOTTERY_ALL, LOTTERY_TABLE_NAME];
+    BOOL ok = [self excuteSQL:sqlString, nil];
+    return ok;
+}
+
 #pragma mark - Private Methods -
 - (ZLotteryModel *)p_createDBLotteryByFMResultSet:(FMResultSet *)retSet
 {

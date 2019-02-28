@@ -50,10 +50,10 @@
     titleLabel.text = @"开奖：";
     titleLabel.numberOfLines = 0;
     titleLabel.textAlignment = NSTextAlignmentLeft;
-    [titleLabel setFont:[UIFont systemFontOfSize:14.0f * [ZLotteryManager sharedManager].fontMultiple]];
+    [titleLabel setFont:[UIFont systemFontOfSize:13.0f * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(contView.mas_left).offset(10);
+        make.left.equalTo(contView.mas_left).offset(8);
         make.centerY.equalTo(contView.mas_centerY);
     }];
     
@@ -62,20 +62,20 @@
     [contView addSubview:self.thridTF];
     
     [self.firstTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(titleLabel.mas_right).offset(4);
-        make.width.mas_equalTo(40);
+        make.left.equalTo(titleLabel.mas_right).offset(0);
+        make.width.mas_equalTo(36);
         make.height.mas_equalTo(36);
         make.centerY.equalTo(contView.mas_centerY);
     }];
     
     [self.secondTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.firstTF.mas_right).offset(4);
+        make.left.equalTo(self.firstTF.mas_right).offset(2);
         make.width.height.equalTo(self.firstTF);
         make.centerY.equalTo(contView.mas_centerY);
     }];
     
     [self.thridTF mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.secondTF.mas_right).offset(4);
+        make.left.equalTo(self.secondTF.mas_right).offset(2);
         make.width.height.equalTo(self.firstTF);
         make.centerY.equalTo(contView.mas_centerY);
     }];
@@ -83,7 +83,7 @@
     UIButton *sureBtn = [[UIButton alloc] initWithFrame:CGRectZero];
     [sureBtn addTarget:self action:@selector(sureBtnOnclick:) forControlEvents:UIControlEventTouchUpInside];
     sureBtn.layer.masksToBounds = YES;
-    sureBtn.layer.cornerRadius = 18;
+    sureBtn.layer.cornerRadius = 15;
     sureBtn.layer.borderColor = [UIColor redColor].CGColor;
     sureBtn.layer.borderWidth = 1;
     [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
@@ -91,16 +91,16 @@
     [sureBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:sureBtn];
     [sureBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(50);
-        make.height.mas_equalTo(36);
-        make.left.equalTo(self.thridTF.mas_right).offset(10);
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(30);
+        make.left.equalTo(self.thridTF.mas_right).offset(8);
         make.centerY.equalTo(contView.mas_centerY);
     }];
     
     UIButton *cutBtn = [[UIButton alloc] initWithFrame:CGRectZero];
     [cutBtn addTarget:self action:@selector(cutBtnBtnOnclick:) forControlEvents:UIControlEventTouchUpInside];
     cutBtn.layer.masksToBounds = YES;
-    cutBtn.layer.cornerRadius = 18;
+    cutBtn.layer.cornerRadius = 15;
     cutBtn.layer.borderColor = [UIColor redColor].CGColor;
     cutBtn.layer.borderWidth = 1;
     [cutBtn setTitle:@"截屏" forState:UIControlStateNormal];
@@ -108,16 +108,16 @@
     [cutBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:cutBtn];
     [cutBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(50);
-        make.height.mas_equalTo(36);
-        make.left.equalTo(sureBtn.mas_right).offset(10);
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(30);
+        make.left.equalTo(sureBtn.mas_right).offset(8);
         make.centerY.equalTo(contView.mas_centerY);
     }];
     
     UIButton *hiddenBtn = [[UIButton alloc] initWithFrame:CGRectZero];
     [hiddenBtn addTarget:self action:@selector(hiddenBtnOnclick:) forControlEvents:UIControlEventTouchUpInside];
     hiddenBtn.layer.masksToBounds = YES;
-    hiddenBtn.layer.cornerRadius = 18;
+    hiddenBtn.layer.cornerRadius = 15;
     hiddenBtn.layer.borderColor = kLineColor.CGColor;
     hiddenBtn.layer.borderWidth = 1;
     [hiddenBtn setTitle:@"隐藏" forState:UIControlStateNormal];
@@ -125,9 +125,26 @@
     [hiddenBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:hiddenBtn];
     [hiddenBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(50);
-        make.height.mas_equalTo(36);
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(30);
         make.left.equalTo(cutBtn.mas_right).offset(10);
+        make.centerY.equalTo(contView.mas_centerY);
+    }];
+    
+    UIButton *clearBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+    [clearBtn addTarget:self action:@selector(clearBtnOnclick:) forControlEvents:UIControlEventTouchUpInside];
+    clearBtn.layer.masksToBounds = YES;
+    clearBtn.layer.cornerRadius = 15;
+    clearBtn.layer.borderColor = kLineColor.CGColor;
+    clearBtn.layer.borderWidth = 1;
+    [clearBtn setTitle:@"清空" forState:UIControlStateNormal];
+    [clearBtn setTitleColor:kLineColor forState:UIControlStateNormal];
+    [clearBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
+    [contView addSubview:clearBtn];
+    [clearBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(30);
+        make.left.equalTo(hiddenBtn.mas_right).offset(10);
         make.centerY.equalTo(contView.mas_centerY);
     }];
 }
@@ -264,6 +281,12 @@
 - (void)cutBtnBtnOnclick:(id)sender {
     if (_cuteBlock) {
         _cuteBlock();
+    }
+}
+
+- (void)clearBtnOnclick:(id)sender {
+    if (_clearBlock) {
+        _clearBlock();
     }
 }
 

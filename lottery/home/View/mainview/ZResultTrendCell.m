@@ -468,7 +468,7 @@
     
     
     NSInteger now_numAnd = [[ZLotteryManager sharedManager] numAnd:model];
-    CGFloat now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+    CGFloat now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth +CGFloatIn750(6);
     
     NSInteger now_diffNum = [[ZLotteryManager sharedManager] diff:model];
     CGFloat now_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (now_diffNum + 0.5) * unitScreenWidth * UnitWidth + CGFloatIn750(6);
@@ -476,7 +476,7 @@
     if (before) {
         
         NSInteger before_numAnd = [[ZLotteryManager sharedManager] numAnd:before];
-        CGFloat before_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (before_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+        CGFloat before_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (before_numAnd - 2.5) * unitScreenWidth * UnitWidth+CGFloatIn750(6);
 //
 //        if (before_and_x > now_and_x) {
 //            before_and_x -= CGFloatIn750(6);
@@ -520,13 +520,13 @@
 //        [self.contentView.layer insertSublayer:solidShapeLayer_6 atIndex:4];
     }
     
-    now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+    now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth +CGFloatIn750(6);
     
     now_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (now_diffNum + 0.5) * unitScreenWidth * UnitWidth + CGFloatIn750(6);
     
     if (after) {
         NSInteger after_numAnd = [[ZLotteryManager sharedManager] numAnd:after];
-        CGFloat after_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (after_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+        CGFloat after_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (after_numAnd - 2.5) * unitScreenWidth * UnitWidth+CGFloatIn750(6);
         
 //        if (after_and_x > now_and_x) {
 //            after_and_x -= CGFloatIn750(6);

@@ -138,7 +138,9 @@ static ZLotteryManager *sharedManager;
 }
 
 
-
+- (void)clearHistoryData {
+    [self.store deleteAllLottery];
+}
 
 #pragma mark - tools
 // - 冒泡降序排序

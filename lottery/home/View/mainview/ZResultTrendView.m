@@ -221,4 +221,11 @@
         _scrollBlock();
     }
 }
+
+- (void)clearData {
+    [self.lotteryArr removeAllObjects];
+    [self.iTableView reloadData];
+    
+    [[ZLotteryManager sharedManager] clearHistoryData];
+}
 @end

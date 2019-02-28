@@ -13,6 +13,6 @@
 @property (nonatomic,strong) void (^scrollBlock)(void);
 
 - (void)addLottery:(ZLotteryModel *)model;
-
+- (void)clearData;
 @end
 

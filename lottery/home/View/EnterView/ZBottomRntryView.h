@@ -13,5 +13,6 @@
 @property (nonatomic,strong) void (^addLotteryBlock)(ZLotteryModel *);
 @property (nonatomic,strong) void (^cuteBlock)(void);
 @property (nonatomic,strong) void (^hiddenBlock)(void);
+@property (nonatomic,strong) void (^clearBlock)(void);
 @end
 

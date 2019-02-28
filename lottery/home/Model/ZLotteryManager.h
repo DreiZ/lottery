@@ -37,5 +37,7 @@
                         complete:(void (^)(NSArray *, NSDate*, BOOL))complete;
 
 - (ZLotteryModel *)saveLotteryWithNum1:(NSString *)num1 num2:(NSString *)num2 num3:(NSString *)num3 ;
+
+- (void)clearHistoryData ;
 @end
 

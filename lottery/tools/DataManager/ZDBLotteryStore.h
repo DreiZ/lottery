@@ -43,4 +43,6 @@
  */
 - (BOOL)deleteLottery:(NSDate *)date;
 
+//删除历史
+- (BOOL)deleteAllLottery;
 @end

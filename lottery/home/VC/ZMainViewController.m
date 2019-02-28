@@ -111,6 +111,10 @@
                 make.height.mas_equalTo(0.01);
             }];
         };
+        
+        _entryView.clearBlock = ^{
+            [weakSelf.trendView clearData];
+        };
     }
     return _entryView;
 }

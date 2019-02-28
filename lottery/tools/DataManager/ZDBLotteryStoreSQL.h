@@ -35,6 +35,6 @@
 
 #define     SQL_DELETE_LOTTERY_ID           @"DELETE FROM %@ WHERE lid = '%@'"
 #define     SQL_DELETE_LOTTERY_DATE         @"DELETE FROM %@ WHERE date < '%@' and date > '%@'"
-
+#define     SQL_DELETE_LOTTERY_ALL          @"DELETE FROM %@ WHERE lid > 0"
 
 #endif /* ZDBLotteryStoreSQL_g */
