@@ -14,18 +14,19 @@
 #import "UIView+Radio.h"
 #import "NSObject+Hint.h"
 #import "UIView+Radio.h"
-#import "DataWorkManager.h"
 #import <NSString+YYAdd.h>
-#import "ZPublicManager.h"
 #import "Const.h"
 #import <YYKit.h>
+
+#import "ZLotteryManager.h"
 
 #define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define kNavBarHeight 44.0
 #define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
 #define kTabBarMoreHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?24:0)
 #define kTopHeight (kStatusBarHeight + kNavBarHeight)
-
+#define     TLNoNilString(str)          (str.length > 0 ? str : @"")
+#define     TLTimeStamp(date)   ([NSString stringWithFormat:@"%lf", [date timeIntervalSince1970]])
 
 #pragma mark -  颜色区
 //主题色

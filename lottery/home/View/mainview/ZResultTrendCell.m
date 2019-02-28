@@ -60,8 +60,8 @@
                   @[@"",@"",@""],
                   @[@"",@"",@"",@"",@"",@""],
                   @[@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@""],
-                  @[@"",@"双"],
-                  @[@"大",@""],
+                  @[@"",@""],
+                  @[@"",@""],
                   @[@"",@"",@"",@"",@"",@""]];
     
     
@@ -165,7 +165,6 @@
             }
         }
     }
-
 }
 
 
@@ -177,9 +176,98 @@
     tempLabel.text = title;
     tempLabel.numberOfLines = 0;
     tempLabel.textAlignment = NSTextAlignmentCenter;
-    [tempLabel setFont:[UIFont systemFontOfSize:13]];
-    //    [self addSubview:tempLabel];
+    [tempLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
     return tempLabel;
+}
+
+-(void)setModel:(ZLotteryModel *)model before:(ZLotteryModel *)before after:(ZLotteryModel *)after {
+    _model = model;
+    _beforeModel = before;
+    _afterModel = after;
+    
+    for (NSArray *tempArr in _labelArr) {
+        for (UILabel *label in tempArr) {
+            label.text = @"";
+        }
+    }
+    
+    for (UILabel *label in _label3UpArr) {
+        label.text = @"";
+    }
+    
+    for (UILabel *label in _label3DownArr) {
+        label.text = @"";
+    }
+    
+    for (UILabel *label in _label6UpArr) {
+        label.text = @"";
+    }
+    
+    for (UILabel *label in _label6DownArr) {
+        label.text = @"";
+    }
+    
+    UILabel *idLabel = _labelArr[0][0];
+    idLabel.text = model.lottert_serial_number;
+    
+    UILabel *num1Label = _labelArr[1][0];
+    UILabel *num2Label = _labelArr[1][1];
+    UILabel *num3Label = _labelArr[1][2];
+    
+    num1Label.text = model.lottery_num1;
+    num2Label.text = model.lottery_num2;
+    num3Label.text = model.lottery_num3;
+    
+    
+    NSArray *spanArr = [[ZLotteryManager sharedManager] span:model];
+    for (NSString *num in spanArr) {
+        UILabel *spanLabel = _labelArr[2][[num integerValue]-1];
+        spanLabel.text = num;
+    }
+    
+    NSInteger numAnd = [[ZLotteryManager sharedManager] numAnd:model];
+    UILabel *andLabel = _labelArr[3][numAnd-3];
+    andLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+    
+    if ([[ZLotteryManager sharedManager] isBig:model]) {
+        UILabel *bigLabel = _labelArr[4][0];
+        bigLabel.text = @"大";
+    }else{
+        UILabel *smallLabel = _labelArr[4][1];
+        smallLabel.text = @"小";
+    }
+    
+    if ([[ZLotteryManager sharedManager] isDouble:model]) {
+        UILabel *bigLabel = _labelArr[5][1];
+        bigLabel.text = @"双";
+    }else{
+        UILabel *smallLabel = _labelArr[5][0];
+        smallLabel.text = @"单";
+    }
+    
+    NSInteger diffNum = [[ZLotteryManager sharedManager] diff:model];
+     UILabel *diffNumLabel = _labelArr[6][diffNum];
+    diffNumLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+    
+    if (before) {
+        NSInteger numAnd = [[ZLotteryManager sharedManager] numAnd:before];
+        UILabel *andLabel = _label3UpArr[numAnd-3];
+        andLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+        
+        NSInteger diffNum = [[ZLotteryManager sharedManager] diff:before];
+        UILabel *diffNumLabel = _label6UpArr[diffNum];
+        diffNumLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+    }
+    
+    if (after) {
+        NSInteger numAnd = [[ZLotteryManager sharedManager] numAnd:after];
+        UILabel *andLabel = _label3DownArr[numAnd-3];
+        andLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+        
+        NSInteger diffNum = [[ZLotteryManager sharedManager] diff:after];
+        UILabel *diffNumLabel = _label6DownArr[diffNum];
+        diffNumLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+    }
 }
 
 + (CGFloat)getCellHeight:(id)sender {

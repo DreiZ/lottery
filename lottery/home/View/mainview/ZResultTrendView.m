@@ -9,12 +9,18 @@
 #import "ZResultTrendView.h"
 #import "ZResultTopTitleView.h"
 #import "ZResultTrendCell.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface ZResultTrendView ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic,strong) ZResultTopTitleView *titleView;
 @property (nonatomic,strong) UITableView *iTableView;
+@property (nonatomic, strong) MJRefreshNormalHeader *refresHeader;
 
 
+
+@property (nonatomic, strong) NSDate *curDate;
+
+@property (nonatomic,strong) NSMutableArray *lotteryArr;
 
 @end
 
@@ -35,6 +41,9 @@
     self.clipsToBounds = YES;
     self.layer.masksToBounds = YES;
     
+    _curDate = [NSDate new];
+    _lotteryArr = [[NSMutableArray alloc] init];
+    
     [self addSubview:self.titleView];
     [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(self);
@@ -47,6 +56,18 @@
         make.top.equalTo(self.titleView.mas_bottom);
     }];
     
+    __weak typeof(self) weakSelf = self;
+    
+    [self.iTableView setMj_header:self.refresHeader];
+    
+    [self p_tryToRefreshMoreRecord:^(NSInteger count, BOOL hasMore) {
+        if (!hasMore) {
+            weakSelf.iTableView.mj_header = nil;
+        }
+        if (count > 0) {
+            [weakSelf.iTableView reloadData];
+        }
+    }];
 }
 
 
@@ -89,6 +110,29 @@
     return _iTableView;
 }
 
+
+- (MJRefreshNormalHeader *)refresHeader
+{
+    if (_refresHeader == nil) {
+        __weak typeof(self) weakself = self;
+        _refresHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [weakself p_tryToRefreshMoreRecord:^(NSInteger count, BOOL hasMore) {
+                [weakself.iTableView.mj_header endRefreshing];
+                if (!hasMore) {
+                    weakself.iTableView.mj_header = nil;
+                }
+                if (count > 0) {
+                    [weakself.iTableView reloadData];
+                    [weakself.iTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:count inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+                }
+            }];
+        }];
+        _refresHeader.lastUpdatedTimeLabel.hidden = YES;
+        _refresHeader.stateLabel.hidden = YES;
+    }
+    return _refresHeader;
+}
+
 #pragma mark - tableView -------datasource-----
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -121,5 +165,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+
+//刷新数据
+- (void)p_tryToRefreshMoreRecord:(void (^)(NSInteger count, BOOL hasMore))complete
+{
+    __weak typeof(self) weakSelf = self;
+    [[ZLotteryManager sharedManager] lotteryRecordForFromDate:_curDate count:20 complete:^(NSArray *array, NSDate* date, BOOL hasMore) {
+        if (array.count > 0 && [date isEqualToDate:weakSelf.curDate]) {
+            weakSelf.curDate = [array[0] date];
+            [weakSelf.lotteryArr insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, array.count)]];
+//            complete(array. count, hasMore);
+        }
+        else {
+//            complete(0, hasMore);
+        }
+    }];
 }
 @end

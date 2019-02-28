@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
 #import "ZMainViewController.h"
 
 @interface AppDelegate ()

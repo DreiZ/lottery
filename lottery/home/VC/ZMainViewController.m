@@ -11,12 +11,15 @@
 #import "ZResultTrendView.h"
 #import "ZRightToolsView.h"
 
+#import "ZLotteryModel.h"
+
 @interface ZMainViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView* iScrollView;
 @property (nonatomic,strong) ZBottomRntryView *entryView;
 @property (nonatomic,strong) ZResultTrendView *trendView;
 @property (nonatomic,strong) ZRightToolsView *toolsView;
 
+@property (nonatomic,strong) ZLotteryModel *lotteryModel;
 
 @end
 
@@ -35,6 +38,10 @@
     [super viewDidLoad];
     
     [self setMainView];
+}
+
+- (void)setData {
+    _lotteryModel = [[ZLotteryModel alloc] init];
 }
 
 #pragma mark - 初始化数据和view
@@ -64,9 +71,6 @@
     }];
 }
 
-- (void)setData {
-    
-}
 
 #pragma mark - 懒加载
 - (UIScrollView *)iScrollView {

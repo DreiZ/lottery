@@ -7,37 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E01F69620EF63530053F47D /* ZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01F69520EF63530053F47D /* ZTextField.m */; };
-		5E0FD47320E63823001CB15F /* ZMyAllBillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FD47220E63823001CB15F /* ZMyAllBillView.m */; };
-		5E19E11D20E4D0C2000C5781 /* NetworkManagerCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19E11B20E4D0C2000C5781 /* NetworkManagerCenter.m */; };
-		5E19E12020E4D110000C5781 /* ZMainPublicNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19E11F20E4D110000C5781 /* ZMainPublicNetworkManager.m */; };
-		5E19E12320E4D135000C5781 /* ZPublicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19E12220E4D135000C5781 /* ZPublicManager.m */; };
-		5E19E12920E4D208000C5781 /* ZUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19E12720E4D208000C5781 /* ZUserModel.m */; };
-		5E19E13020E4E25E000C5781 /* ZHomeTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19E12F20E4E25E000C5781 /* ZHomeTitleCell.m */; };
-		5E19E13620E4E2B1000C5781 /* ZHomeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19E13520E4E2B1000C5781 /* ZHomeListCell.m */; };
-		5E2BDFAB20E629640010B5F6 /* ZSeletedNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2BDFAA20E629640010B5F6 /* ZSeletedNumView.m */; };
-		5E401C9A20E5BA8A00BFED02 /* ZHomeRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401C9920E5BA8A00BFED02 /* ZHomeRightView.m */; };
-		5E401C9D20E5C46A00BFED02 /* ZHomeTopTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401C9C20E5C46A00BFED02 /* ZHomeTopTitleView.m */; };
-		5E401CA020E5C7C100BFED02 /* ZHomeLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401C9F20E5C7C100BFED02 /* ZHomeLeftView.m */; };
-		5E401CA320E5CD8900BFED02 /* ZHomeListAddTFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CA220E5CD8900BFED02 /* ZHomeListAddTFView.m */; };
-		5E401CA620E5CEAF00BFED02 /* ZHomeTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CA520E5CEAF00BFED02 /* ZHomeTextFieldView.m */; };
-		5E401CA920E5D64800BFED02 /* ZHomeListAddTFCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CA820E5D64800BFED02 /* ZHomeListAddTFCell.m */; };
-		5E401CB120E5DB0E00BFED02 /* ZRightTopBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CB020E5DB0E00BFED02 /* ZRightTopBtnView.m */; };
-		5E401CB420E5DB2500BFED02 /* ZRightOpenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CB320E5DB2500BFED02 /* ZRightOpenView.m */; };
-		5E401CBA20E5DB5600BFED02 /* ZRightBottomBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CB920E5DB5600BFED02 /* ZRightBottomBtnView.m */; };
-		5E401CBD20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401CBC20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.m */; };
-		5E4521C020E89FF800A53CFA /* ZInningModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4521BF20E89FF800A53CFA /* ZInningModel.m */; };
-		5E4521C320E8CFC200A53CFA /* ZRightOpenSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4521C220E8CFC200A53CFA /* ZRightOpenSelectView.m */; };
-		5E4521C620E8D3AE00A53CFA /* ZRightHistorySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4521C520E8D3AE00A53CFA /* ZRightHistorySelectView.m */; };
-		5E50258120E9D6B9000D02EA /* ZInningDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50258020E9D6B9000D02EA /* ZInningDataManager.m */; };
-		5E50258420EA29AB000D02EA /* ZHomeListResultTFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50258320EA29AB000D02EA /* ZHomeListResultTFView.m */; };
-		5E50258720EA2A05000D02EA /* ZHomeListResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50258620EA2A05000D02EA /* ZHomeListResultCell.m */; };
 		5E50259120EB4964000D02EA /* NSArray+LYNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50258A20EB4964000D02EA /* NSArray+LYNil.m */; };
 		5E50259220EB4964000D02EA /* NSDictionary+LYNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50258C20EB4964000D02EA /* NSDictionary+LYNil.m */; };
 		5E50259320EB4964000D02EA /* NSMutableArray+LYNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50258E20EB4964000D02EA /* NSMutableArray+LYNil.m */; };
 		5E50259420EB4964000D02EA /* NSMutableDictionary+LYNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E50259020EB4964000D02EA /* NSMutableDictionary+LYNil.m */; };
-		5E5652C420E7122500F7781E /* ZMyAlllBillFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5652C320E7122500F7781E /* ZMyAlllBillFootView.m */; };
-		5E5652C720E716A400F7781E /* ZMyAllBillListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5652C620E716A400F7781E /* ZMyAllBillListCell.m */; };
 		5E5D893420E20CDE0096536C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D893220E20CDE0096536C /* Main.storyboard */; };
 		5E5D893620E20CE00096536C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D893520E20CE00096536C /* Assets.xcassets */; };
 		5E5D893920E20CE00096536C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D893720E20CE00096536C /* LaunchScreen.storyboard */; };
@@ -46,25 +19,16 @@
 		5E5D896420E20F130096536C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D896020E20F130096536C /* AppDelegate.m */; };
 		5E5D896520E20F130096536C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D896120E20F130096536C /* main.m */; };
 		5E5D896620E20F130096536C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D896320E20F130096536C /* ViewController.m */; };
-		5E5D896E20E20FBF0096536C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D896D20E20FBF0096536C /* HomeViewController.m */; };
 		5E5D897220E210370096536C /* UIView+Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D897020E210360096536C /* UIView+Radio.m */; };
-		5E5D899020E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D897720E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.m */; };
-		5E5D899120E21F4A0096536C /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D897A20E21F4A0096536C /* FMDatabase.m */; };
-		5E5D899220E21F4A0096536C /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D897C20E21F4A0096536C /* FMDatabaseAdditions.m */; };
-		5E5D899320E21F4A0096536C /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D897E20E21F4A0096536C /* FMDatabasePool.m */; };
-		5E5D899420E21F4A0096536C /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898020E21F4A0096536C /* FMDatabaseQueue.m */; };
-		5E5D899520E21F4A0096536C /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898220E21F4A0096536C /* FMResultSet.m */; };
-		5E5D899620E21F4A0096536C /* LKDB+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898520E21F4A0096536C /* LKDB+Mapping.m */; };
-		5E5D899720E21F4A0096536C /* LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898720E21F4A0096536C /* LKDBHelper.m */; };
-		5E5D899820E21F4A0096536C /* LKDBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898920E21F4A0096536C /* LKDBUtils.m */; };
-		5E5D899920E21F4A0096536C /* NSObject+LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898B20E21F4A0096536C /* NSObject+LKDBHelper.m */; };
-		5E5D899A20E21F4A0096536C /* NSObject+LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898D20E21F4A0096536C /* NSObject+LKModel.m */; };
-		5E5D899B20E21F4A0096536C /* LKModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D898F20E21F4A0096536C /* LKModels.m */; };
-		5E5D899E20E21F6F0096536C /* DataWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D899D20E21F6F0096536C /* DataWorkManager.m */; };
 		5E5D89A120E21FA00096536C /* ZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D89A020E21FA00096536C /* ZBaseModel.m */; };
 		5E5D89AA20E223A90096536C /* ZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D89A920E223A90096536C /* ZBaseViewController.m */; };
 		5E5D89AE20E229DC0096536C /* NSObject+Hint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D89AD20E229DC0096536C /* NSObject+Hint.m */; };
 		6834D8CB22262C750072F593 /* ZResultTrendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6834D8CA22262C750072F593 /* ZResultTrendCell.m */; };
+		6834D8CF222669920072F593 /* ZLotteryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6834D8CE222669920072F593 /* ZLotteryManager.m */; };
+		6834D8D222266EDB0072F593 /* ZLotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6834D8D122266EDB0072F593 /* ZLotteryModel.m */; };
+		6834D8DB222679600072F593 /* ZDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6834D8D6222679600072F593 /* ZDBManager.m */; };
+		6834D8DC222679600072F593 /* ZDBLotteryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6834D8D7222679600072F593 /* ZDBLotteryStore.m */; };
+		6834D8DD222679600072F593 /* ZDBBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6834D8DA222679600072F593 /* ZDBBaseStore.m */; };
 		68411905222507F900EE4E82 /* ZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68411904222507F900EE4E82 /* ZMainViewController.m */; };
 		6841190922250CDD00EE4E82 /* ZBottomRntryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6841190822250CDD00EE4E82 /* ZBottomRntryView.m */; };
 		6841190C22250D0200EE4E82 /* ZRightToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6841190B22250D0200EE4E82 /* ZRightToolsView.m */; };
@@ -91,57 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E01F69420EF63530053F47D /* ZTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTextField.h; sourceTree = "<group>"; };
-		5E01F69520EF63530053F47D /* ZTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTextField.m; sourceTree = "<group>"; };
-		5E0FD47120E63823001CB15F /* ZMyAllBillView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMyAllBillView.h; sourceTree = "<group>"; };
-		5E0FD47220E63823001CB15F /* ZMyAllBillView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMyAllBillView.m; sourceTree = "<group>"; };
-		5E19E11B20E4D0C2000C5781 /* NetworkManagerCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerCenter.m; sourceTree = "<group>"; };
-		5E19E11C20E4D0C2000C5781 /* NetworkManagerCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManagerCenter.h; sourceTree = "<group>"; };
-		5E19E11E20E4D10F000C5781 /* ZMainPublicNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMainPublicNetworkManager.h; sourceTree = "<group>"; };
-		5E19E11F20E4D110000C5781 /* ZMainPublicNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMainPublicNetworkManager.m; sourceTree = "<group>"; };
-		5E19E12120E4D135000C5781 /* ZPublicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPublicManager.h; sourceTree = "<group>"; };
-		5E19E12220E4D135000C5781 /* ZPublicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPublicManager.m; sourceTree = "<group>"; };
-		5E19E12720E4D208000C5781 /* ZUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUserModel.m; sourceTree = "<group>"; };
-		5E19E12820E4D208000C5781 /* ZUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUserModel.h; sourceTree = "<group>"; };
 		5E19E12D20E4D56B000C5781 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
-		5E19E12E20E4E25E000C5781 /* ZHomeTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeTitleCell.h; sourceTree = "<group>"; };
-		5E19E12F20E4E25E000C5781 /* ZHomeTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeTitleCell.m; sourceTree = "<group>"; };
-		5E19E13420E4E2B1000C5781 /* ZHomeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeListCell.h; sourceTree = "<group>"; };
-		5E19E13520E4E2B1000C5781 /* ZHomeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeListCell.m; sourceTree = "<group>"; };
-		5E2BDFA920E629640010B5F6 /* ZSeletedNumView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSeletedNumView.h; sourceTree = "<group>"; };
-		5E2BDFAA20E629640010B5F6 /* ZSeletedNumView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSeletedNumView.m; sourceTree = "<group>"; };
-		5E401C9820E5BA8A00BFED02 /* ZHomeRightView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeRightView.h; sourceTree = "<group>"; };
-		5E401C9920E5BA8A00BFED02 /* ZHomeRightView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeRightView.m; sourceTree = "<group>"; };
-		5E401C9B20E5C46A00BFED02 /* ZHomeTopTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeTopTitleView.h; sourceTree = "<group>"; };
-		5E401C9C20E5C46A00BFED02 /* ZHomeTopTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeTopTitleView.m; sourceTree = "<group>"; };
-		5E401C9E20E5C7C100BFED02 /* ZHomeLeftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeLeftView.h; sourceTree = "<group>"; };
-		5E401C9F20E5C7C100BFED02 /* ZHomeLeftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeLeftView.m; sourceTree = "<group>"; };
-		5E401CA120E5CD8900BFED02 /* ZHomeListAddTFView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeListAddTFView.h; sourceTree = "<group>"; };
-		5E401CA220E5CD8900BFED02 /* ZHomeListAddTFView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeListAddTFView.m; sourceTree = "<group>"; };
-		5E401CA420E5CEAF00BFED02 /* ZHomeTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeTextFieldView.h; sourceTree = "<group>"; };
-		5E401CA520E5CEAF00BFED02 /* ZHomeTextFieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeTextFieldView.m; sourceTree = "<group>"; };
-		5E401CA720E5D64800BFED02 /* ZHomeListAddTFCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeListAddTFCell.h; sourceTree = "<group>"; };
-		5E401CA820E5D64800BFED02 /* ZHomeListAddTFCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeListAddTFCell.m; sourceTree = "<group>"; };
-		5E401CAF20E5DB0E00BFED02 /* ZRightTopBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRightTopBtnView.h; sourceTree = "<group>"; };
-		5E401CB020E5DB0E00BFED02 /* ZRightTopBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRightTopBtnView.m; sourceTree = "<group>"; };
-		5E401CB220E5DB2500BFED02 /* ZRightOpenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRightOpenView.h; sourceTree = "<group>"; };
-		5E401CB320E5DB2500BFED02 /* ZRightOpenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRightOpenView.m; sourceTree = "<group>"; };
-		5E401CB820E5DB5600BFED02 /* ZRightBottomBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRightBottomBtnView.h; sourceTree = "<group>"; };
-		5E401CB920E5DB5600BFED02 /* ZRightBottomBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRightBottomBtnView.m; sourceTree = "<group>"; };
-		5E401CBB20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRightCustomKeyBoardView.h; sourceTree = "<group>"; };
-		5E401CBC20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRightCustomKeyBoardView.m; sourceTree = "<group>"; };
-		5E4521BE20E89FF800A53CFA /* ZInningModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZInningModel.h; sourceTree = "<group>"; };
-		5E4521BF20E89FF800A53CFA /* ZInningModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZInningModel.m; sourceTree = "<group>"; };
-		5E4521C120E8CFC200A53CFA /* ZRightOpenSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRightOpenSelectView.h; sourceTree = "<group>"; };
-		5E4521C220E8CFC200A53CFA /* ZRightOpenSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRightOpenSelectView.m; sourceTree = "<group>"; };
-		5E4521C420E8D3AE00A53CFA /* ZRightHistorySelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRightHistorySelectView.h; sourceTree = "<group>"; };
-		5E4521C520E8D3AE00A53CFA /* ZRightHistorySelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRightHistorySelectView.m; sourceTree = "<group>"; };
-		5E50257F20E9D6B9000D02EA /* ZInningDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZInningDataManager.h; sourceTree = "<group>"; };
-		5E50258020E9D6B9000D02EA /* ZInningDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZInningDataManager.m; sourceTree = "<group>"; };
-		5E50258220EA29AB000D02EA /* ZHomeListResultTFView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeListResultTFView.h; sourceTree = "<group>"; };
-		5E50258320EA29AB000D02EA /* ZHomeListResultTFView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeListResultTFView.m; sourceTree = "<group>"; };
-		5E50258520EA2A05000D02EA /* ZHomeListResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHomeListResultCell.h; sourceTree = "<group>"; };
-		5E50258620EA2A05000D02EA /* ZHomeListResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHomeListResultCell.m; sourceTree = "<group>"; };
 		5E50258920EB4964000D02EA /* NSArray+LYNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LYNil.h"; sourceTree = "<group>"; };
 		5E50258A20EB4964000D02EA /* NSArray+LYNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LYNil.m"; sourceTree = "<group>"; };
 		5E50258B20EB4964000D02EA /* NSDictionary+LYNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LYNil.h"; sourceTree = "<group>"; };
@@ -150,10 +64,6 @@
 		5E50258E20EB4964000D02EA /* NSMutableArray+LYNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+LYNil.m"; sourceTree = "<group>"; };
 		5E50258F20EB4964000D02EA /* NSMutableDictionary+LYNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+LYNil.h"; sourceTree = "<group>"; };
 		5E50259020EB4964000D02EA /* NSMutableDictionary+LYNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+LYNil.m"; sourceTree = "<group>"; };
-		5E5652C220E7122500F7781E /* ZMyAlllBillFootView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMyAlllBillFootView.h; sourceTree = "<group>"; };
-		5E5652C320E7122500F7781E /* ZMyAlllBillFootView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMyAlllBillFootView.m; sourceTree = "<group>"; };
-		5E5652C520E716A400F7781E /* ZMyAllBillListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMyAllBillListCell.h; sourceTree = "<group>"; };
-		5E5652C620E716A400F7781E /* ZMyAllBillListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMyAllBillListCell.m; sourceTree = "<group>"; };
 		5E5D892920E20CDE0096536C /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5D893320E20CDE0096536C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E5D893520E20CE00096536C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,36 +80,8 @@
 		5E5D896120E20F130096536C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E5D896220E20F130096536C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5E5D896320E20F130096536C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5E5D896C20E20FBF0096536C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		5E5D896D20E20FBF0096536C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5E5D897020E210360096536C /* UIView+Radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radio.m"; sourceTree = "<group>"; };
 		5E5D897120E210370096536C /* UIView+Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Radio.h"; sourceTree = "<group>"; };
-		5E5D897620E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
-		5E5D897720E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
-		5E5D897920E21F4A0096536C /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		5E5D897A20E21F4A0096536C /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		5E5D897B20E21F4A0096536C /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		5E5D897C20E21F4A0096536C /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		5E5D897D20E21F4A0096536C /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		5E5D897E20E21F4A0096536C /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		5E5D897F20E21F4A0096536C /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		5E5D898020E21F4A0096536C /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		5E5D898120E21F4A0096536C /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		5E5D898220E21F4A0096536C /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		5E5D898420E21F4A0096536C /* LKDB+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LKDB+Mapping.h"; sourceTree = "<group>"; };
-		5E5D898520E21F4A0096536C /* LKDB+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LKDB+Mapping.m"; sourceTree = "<group>"; };
-		5E5D898620E21F4A0096536C /* LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBHelper.h; sourceTree = "<group>"; };
-		5E5D898720E21F4A0096536C /* LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBHelper.m; sourceTree = "<group>"; };
-		5E5D898820E21F4A0096536C /* LKDBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBUtils.h; sourceTree = "<group>"; };
-		5E5D898920E21F4A0096536C /* LKDBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBUtils.m; sourceTree = "<group>"; };
-		5E5D898A20E21F4A0096536C /* NSObject+LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKDBHelper.h"; sourceTree = "<group>"; };
-		5E5D898B20E21F4A0096536C /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
-		5E5D898C20E21F4A0096536C /* NSObject+LKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKModel.h"; sourceTree = "<group>"; };
-		5E5D898D20E21F4A0096536C /* NSObject+LKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKModel.m"; sourceTree = "<group>"; };
-		5E5D898E20E21F4A0096536C /* LKModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKModels.h; sourceTree = "<group>"; };
-		5E5D898F20E21F4A0096536C /* LKModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKModels.m; sourceTree = "<group>"; };
-		5E5D899C20E21F6F0096536C /* DataWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataWorkManager.h; sourceTree = "<group>"; };
-		5E5D899D20E21F6F0096536C /* DataWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataWorkManager.m; sourceTree = "<group>"; };
 		5E5D899F20E21FA00096536C /* ZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBaseModel.h; sourceTree = "<group>"; };
 		5E5D89A020E21FA00096536C /* ZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBaseModel.m; sourceTree = "<group>"; };
 		5E5D89A820E223A90096536C /* ZBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBaseViewController.h; sourceTree = "<group>"; };
@@ -209,6 +91,17 @@
 		5E5D89B220E22AE90096536C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6834D8C922262C750072F593 /* ZResultTrendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZResultTrendCell.h; sourceTree = "<group>"; };
 		6834D8CA22262C750072F593 /* ZResultTrendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZResultTrendCell.m; sourceTree = "<group>"; };
+		6834D8CD222669920072F593 /* ZLotteryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLotteryManager.h; sourceTree = "<group>"; };
+		6834D8CE222669920072F593 /* ZLotteryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLotteryManager.m; sourceTree = "<group>"; };
+		6834D8D022266EDB0072F593 /* ZLotteryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLotteryModel.h; sourceTree = "<group>"; };
+		6834D8D122266EDB0072F593 /* ZLotteryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLotteryModel.m; sourceTree = "<group>"; };
+		6834D8D4222679600072F593 /* ZDBLotteryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBLotteryStore.h; sourceTree = "<group>"; };
+		6834D8D5222679600072F593 /* ZDBBaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBBaseStore.h; sourceTree = "<group>"; };
+		6834D8D6222679600072F593 /* ZDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBManager.m; sourceTree = "<group>"; };
+		6834D8D7222679600072F593 /* ZDBLotteryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBLotteryStore.m; sourceTree = "<group>"; };
+		6834D8D8222679600072F593 /* ZDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBManager.h; sourceTree = "<group>"; };
+		6834D8D9222679600072F593 /* ZDBLotteryStoreSQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBLotteryStoreSQL.h; sourceTree = "<group>"; };
+		6834D8DA222679600072F593 /* ZDBBaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBBaseStore.m; sourceTree = "<group>"; };
 		68411903222507F900EE4E82 /* ZMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMainViewController.h; sourceTree = "<group>"; };
 		68411904222507F900EE4E82 /* ZMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMainViewController.m; sourceTree = "<group>"; };
 		6841190722250CDD00EE4E82 /* ZBottomRntryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBottomRntryView.h; sourceTree = "<group>"; };
@@ -265,73 +158,6 @@
 				95A395F6544E8FA8177CF7F1 /* libPods-lottery.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5E19E11A20E4D0B0000C5781 /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				5E19E11C20E4D0C2000C5781 /* NetworkManagerCenter.h */,
-				5E19E11B20E4D0C2000C5781 /* NetworkManagerCenter.m */,
-				5E19E11E20E4D10F000C5781 /* ZMainPublicNetworkManager.h */,
-				5E19E11F20E4D110000C5781 /* ZMainPublicNetworkManager.m */,
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
-		5E401CAA20E5DA6700BFED02 /* LeftView */ = {
-			isa = PBXGroup;
-			children = (
-				5E19E12E20E4E25E000C5781 /* ZHomeTitleCell.h */,
-				5E19E12F20E4E25E000C5781 /* ZHomeTitleCell.m */,
-				5E19E13420E4E2B1000C5781 /* ZHomeListCell.h */,
-				5E19E13520E4E2B1000C5781 /* ZHomeListCell.m */,
-				5E401C9B20E5C46A00BFED02 /* ZHomeTopTitleView.h */,
-				5E401C9C20E5C46A00BFED02 /* ZHomeTopTitleView.m */,
-				5E401C9E20E5C7C100BFED02 /* ZHomeLeftView.h */,
-				5E401C9F20E5C7C100BFED02 /* ZHomeLeftView.m */,
-				5E401CA120E5CD8900BFED02 /* ZHomeListAddTFView.h */,
-				5E401CA220E5CD8900BFED02 /* ZHomeListAddTFView.m */,
-				5E401CA720E5D64800BFED02 /* ZHomeListAddTFCell.h */,
-				5E401CA820E5D64800BFED02 /* ZHomeListAddTFCell.m */,
-				5E401CA420E5CEAF00BFED02 /* ZHomeTextFieldView.h */,
-				5E401CA520E5CEAF00BFED02 /* ZHomeTextFieldView.m */,
-				5E50258220EA29AB000D02EA /* ZHomeListResultTFView.h */,
-				5E50258320EA29AB000D02EA /* ZHomeListResultTFView.m */,
-				5E50258520EA2A05000D02EA /* ZHomeListResultCell.h */,
-				5E50258620EA2A05000D02EA /* ZHomeListResultCell.m */,
-			);
-			path = LeftView;
-			sourceTree = "<group>";
-		};
-		5E401CAB20E5DA7000BFED02 /* rightView */ = {
-			isa = PBXGroup;
-			children = (
-				5E401C9820E5BA8A00BFED02 /* ZHomeRightView.h */,
-				5E401C9920E5BA8A00BFED02 /* ZHomeRightView.m */,
-				5E401CAF20E5DB0E00BFED02 /* ZRightTopBtnView.h */,
-				5E401CB020E5DB0E00BFED02 /* ZRightTopBtnView.m */,
-				5E401CB220E5DB2500BFED02 /* ZRightOpenView.h */,
-				5E401CB320E5DB2500BFED02 /* ZRightOpenView.m */,
-				5E4521C120E8CFC200A53CFA /* ZRightOpenSelectView.h */,
-				5E4521C220E8CFC200A53CFA /* ZRightOpenSelectView.m */,
-				5E401CB820E5DB5600BFED02 /* ZRightBottomBtnView.h */,
-				5E401CB920E5DB5600BFED02 /* ZRightBottomBtnView.m */,
-				5E401CBB20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.h */,
-				5E401CBC20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.m */,
-				5E2BDFA920E629640010B5F6 /* ZSeletedNumView.h */,
-				5E2BDFAA20E629640010B5F6 /* ZSeletedNumView.m */,
-				5E0FD47120E63823001CB15F /* ZMyAllBillView.h */,
-				5E0FD47220E63823001CB15F /* ZMyAllBillView.m */,
-				5E5652C220E7122500F7781E /* ZMyAlllBillFootView.h */,
-				5E5652C320E7122500F7781E /* ZMyAlllBillFootView.m */,
-				5E5652C520E716A400F7781E /* ZMyAllBillListCell.h */,
-				5E5652C620E716A400F7781E /* ZMyAllBillListCell.m */,
-				5E4521C420E8D3AE00A53CFA /* ZRightHistorySelectView.h */,
-				5E4521C520E8D3AE00A53CFA /* ZRightHistorySelectView.m */,
-				5E01F69420EF63530053F47D /* ZTextField.h */,
-				5E01F69520EF63530053F47D /* ZTextField.m */,
-			);
-			path = rightView;
 			sourceTree = "<group>";
 		};
 		5E50258820EB4964000D02EA /* NSArray+LYNil */ = {
@@ -430,8 +256,6 @@
 		5E5D896820E20F660096536C /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				5E5D896C20E20FBF0096536C /* HomeViewController.h */,
-				5E5D896D20E20FBF0096536C /* HomeViewController.m */,
 				5E5D89A820E223A90096536C /* ZBaseViewController.h */,
 				5E5D89A920E223A90096536C /* ZBaseViewController.m */,
 				68411903222507F900EE4E82 /* ZMainViewController.h */,
@@ -443,14 +267,12 @@
 		5E5D896920E20F760096536C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E19E12820E4D208000C5781 /* ZUserModel.h */,
-				5E19E12720E4D208000C5781 /* ZUserModel.m */,
 				5E5D899F20E21FA00096536C /* ZBaseModel.h */,
 				5E5D89A020E21FA00096536C /* ZBaseModel.m */,
-				5E4521BE20E89FF800A53CFA /* ZInningModel.h */,
-				5E4521BF20E89FF800A53CFA /* ZInningModel.m */,
-				5E50257F20E9D6B9000D02EA /* ZInningDataManager.h */,
-				5E50258020E9D6B9000D02EA /* ZInningDataManager.m */,
+				6834D8CD222669920072F593 /* ZLotteryManager.h */,
+				6834D8CE222669920072F593 /* ZLotteryManager.m */,
+				6834D8D022266EDB0072F593 /* ZLotteryModel.h */,
+				6834D8D122266EDB0072F593 /* ZLotteryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,8 +283,6 @@
 				6841190622250CB700EE4E82 /* EnterView */,
 				684119022225036D00EE4E82 /* toolsView */,
 				684119012225035D00EE4E82 /* mainview */,
-				5E401CAB20E5DA7000BFED02 /* rightView */,
-				5E401CAA20E5DA6700BFED02 /* LeftView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,79 +290,12 @@
 		5E5D896F20E210230096536C /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				6834D8D32226781F0072F593 /* DataManager */,
 				5E50258820EB4964000D02EA /* NSArray+LYNil */,
-				5E19E12120E4D135000C5781 /* ZPublicManager.h */,
-				5E19E12220E4D135000C5781 /* ZPublicManager.m */,
-				5E19E11A20E4D0B0000C5781 /* NetworkManager */,
-				5E5D89B020E229F90096536C /* DataWorkManager */,
 				5E5D89AF20E229EA0096536C /* UIView+Radio */,
 				5E5D89AB20E229DC0096536C /* NSObject+Hint */,
-				5E5D897320E21F4A0096536C /* LKDBHelper */,
 			);
 			path = tools;
-			sourceTree = "<group>";
-		};
-		5E5D897320E21F4A0096536C /* LKDBHelper */ = {
-			isa = PBXGroup;
-			children = (
-				5E5D897420E21F4A0096536C /* FMDB */,
-				5E5D898320E21F4A0096536C /* Helper */,
-				5E5D898E20E21F4A0096536C /* LKModels.h */,
-				5E5D898F20E21F4A0096536C /* LKModels.m */,
-			);
-			path = LKDBHelper;
-			sourceTree = "<group>";
-		};
-		5E5D897420E21F4A0096536C /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				5E5D897520E21F4A0096536C /* extra */,
-				5E5D897820E21F4A0096536C /* src */,
-			);
-			path = FMDB;
-			sourceTree = "<group>";
-		};
-		5E5D897520E21F4A0096536C /* extra */ = {
-			isa = PBXGroup;
-			children = (
-				5E5D897620E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.h */,
-				5E5D897720E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.m */,
-			);
-			path = extra;
-			sourceTree = "<group>";
-		};
-		5E5D897820E21F4A0096536C /* src */ = {
-			isa = PBXGroup;
-			children = (
-				5E5D897920E21F4A0096536C /* FMDatabase.h */,
-				5E5D897A20E21F4A0096536C /* FMDatabase.m */,
-				5E5D897B20E21F4A0096536C /* FMDatabaseAdditions.h */,
-				5E5D897C20E21F4A0096536C /* FMDatabaseAdditions.m */,
-				5E5D897D20E21F4A0096536C /* FMDatabasePool.h */,
-				5E5D897E20E21F4A0096536C /* FMDatabasePool.m */,
-				5E5D897F20E21F4A0096536C /* FMDatabaseQueue.h */,
-				5E5D898020E21F4A0096536C /* FMDatabaseQueue.m */,
-				5E5D898120E21F4A0096536C /* FMResultSet.h */,
-				5E5D898220E21F4A0096536C /* FMResultSet.m */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		5E5D898320E21F4A0096536C /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				5E5D898420E21F4A0096536C /* LKDB+Mapping.h */,
-				5E5D898520E21F4A0096536C /* LKDB+Mapping.m */,
-				5E5D898620E21F4A0096536C /* LKDBHelper.h */,
-				5E5D898720E21F4A0096536C /* LKDBHelper.m */,
-				5E5D898820E21F4A0096536C /* LKDBUtils.h */,
-				5E5D898920E21F4A0096536C /* LKDBUtils.m */,
-				5E5D898A20E21F4A0096536C /* NSObject+LKDBHelper.h */,
-				5E5D898B20E21F4A0096536C /* NSObject+LKDBHelper.m */,
-				5E5D898C20E21F4A0096536C /* NSObject+LKModel.h */,
-				5E5D898D20E21F4A0096536C /* NSObject+LKModel.m */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		5E5D89AB20E229DC0096536C /* NSObject+Hint */ = {
@@ -563,13 +316,18 @@
 			path = "UIView+Radio";
 			sourceTree = "<group>";
 		};
-		5E5D89B020E229F90096536C /* DataWorkManager */ = {
+		6834D8D32226781F0072F593 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				5E5D899C20E21F6F0096536C /* DataWorkManager.h */,
-				5E5D899D20E21F6F0096536C /* DataWorkManager.m */,
+				6834D8D5222679600072F593 /* ZDBBaseStore.h */,
+				6834D8DA222679600072F593 /* ZDBBaseStore.m */,
+				6834D8D4222679600072F593 /* ZDBLotteryStore.h */,
+				6834D8D7222679600072F593 /* ZDBLotteryStore.m */,
+				6834D8D9222679600072F593 /* ZDBLotteryStoreSQL.h */,
+				6834D8D8222679600072F593 /* ZDBManager.h */,
+				6834D8D6222679600072F593 /* ZDBManager.m */,
 			);
-			path = DataWorkManager;
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		684119012225035D00EE4E82 /* mainview */ = {
@@ -757,10 +515,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-lottery/Pods-lottery-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -774,64 +534,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E401CB420E5DB2500BFED02 /* ZRightOpenView.m in Sources */,
-				5E5D899720E21F4A0096536C /* LKDBHelper.m in Sources */,
-				5E0FD47320E63823001CB15F /* ZMyAllBillView.m in Sources */,
 				5E50259220EB4964000D02EA /* NSDictionary+LYNil.m in Sources */,
-				5E401C9A20E5BA8A00BFED02 /* ZHomeRightView.m in Sources */,
 				5E5D896620E20F130096536C /* ViewController.m in Sources */,
-				5E5D899620E21F4A0096536C /* LKDB+Mapping.m in Sources */,
+				6834D8CF222669920072F593 /* ZLotteryManager.m in Sources */,
 				5E5D896520E20F130096536C /* main.m in Sources */,
-				5E19E12320E4D135000C5781 /* ZPublicManager.m in Sources */,
-				5E2BDFAB20E629640010B5F6 /* ZSeletedNumView.m in Sources */,
-				5E401CB120E5DB0E00BFED02 /* ZRightTopBtnView.m in Sources */,
+				6834D8DD222679600072F593 /* ZDBBaseStore.m in Sources */,
+				6834D8DB222679600072F593 /* ZDBManager.m in Sources */,
 				5E5D896420E20F130096536C /* AppDelegate.m in Sources */,
 				5E5D89AA20E223A90096536C /* ZBaseViewController.m in Sources */,
-				5E5D899120E21F4A0096536C /* FMDatabase.m in Sources */,
-				5E19E11D20E4D0C2000C5781 /* NetworkManagerCenter.m in Sources */,
-				5E401C9D20E5C46A00BFED02 /* ZHomeTopTitleView.m in Sources */,
-				5E401CA920E5D64800BFED02 /* ZHomeListAddTFCell.m in Sources */,
-				5E50258420EA29AB000D02EA /* ZHomeListResultTFView.m in Sources */,
-				5E19E12920E4D208000C5781 /* ZUserModel.m in Sources */,
-				5E401CA320E5CD8900BFED02 /* ZHomeListAddTFView.m in Sources */,
 				5E50259120EB4964000D02EA /* NSArray+LYNil.m in Sources */,
-				5E5652C720E716A400F7781E /* ZMyAllBillListCell.m in Sources */,
-				5E401CBA20E5DB5600BFED02 /* ZRightBottomBtnView.m in Sources */,
-				5E401CA620E5CEAF00BFED02 /* ZHomeTextFieldView.m in Sources */,
-				5E19E13620E4E2B1000C5781 /* ZHomeListCell.m in Sources */,
 				5E50259420EB4964000D02EA /* NSMutableDictionary+LYNil.m in Sources */,
-				5E5D899320E21F4A0096536C /* FMDatabasePool.m in Sources */,
 				5E5D89A120E21FA00096536C /* ZBaseModel.m in Sources */,
-				5E5D899420E21F4A0096536C /* FMDatabaseQueue.m in Sources */,
-				5E5D899B20E21F4A0096536C /* LKModels.m in Sources */,
 				68411912222518CF00EE4E82 /* ZResultTopTitleView.m in Sources */,
-				5E401CA020E5C7C100BFED02 /* ZHomeLeftView.m in Sources */,
-				5E4521C620E8D3AE00A53CFA /* ZRightHistorySelectView.m in Sources */,
 				6834D8CB22262C750072F593 /* ZResultTrendCell.m in Sources */,
-				5E50258720EA2A05000D02EA /* ZHomeListResultCell.m in Sources */,
-				5E5D899A20E21F4A0096536C /* NSObject+LKModel.m in Sources */,
 				6841190922250CDD00EE4E82 /* ZBottomRntryView.m in Sources */,
-				5E19E13020E4E25E000C5781 /* ZHomeTitleCell.m in Sources */,
-				5E50258120E9D6B9000D02EA /* ZInningDataManager.m in Sources */,
 				5E5D897220E210370096536C /* UIView+Radio.m in Sources */,
 				6841190F22250D5A00EE4E82 /* ZResultTrendView.m in Sources */,
-				5E5652C420E7122500F7781E /* ZMyAlllBillFootView.m in Sources */,
-				5E5D899920E21F4A0096536C /* NSObject+LKDBHelper.m in Sources */,
-				5E5D896E20E20FBF0096536C /* HomeViewController.m in Sources */,
-				5E4521C320E8CFC200A53CFA /* ZRightOpenSelectView.m in Sources */,
 				5E50259320EB4964000D02EA /* NSMutableArray+LYNil.m in Sources */,
-				5E4521C020E89FF800A53CFA /* ZInningModel.m in Sources */,
-				5E19E12020E4D110000C5781 /* ZMainPublicNetworkManager.m in Sources */,
-				5E5D899520E21F4A0096536C /* FMResultSet.m in Sources */,
-				5E401CBD20E5DB8A00BFED02 /* ZRightCustomKeyBoardView.m in Sources */,
 				6841190C22250D0200EE4E82 /* ZRightToolsView.m in Sources */,
-				5E01F69620EF63530053F47D /* ZTextField.m in Sources */,
+				6834D8D222266EDB0072F593 /* ZLotteryModel.m in Sources */,
 				5E5D89AE20E229DC0096536C /* NSObject+Hint.m in Sources */,
-				5E5D899E20E21F6F0096536C /* DataWorkManager.m in Sources */,
-				5E5D899020E21F4A0096536C /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				6834D8DC222679600072F593 /* ZDBLotteryStore.m in Sources */,
 				68411905222507F900EE4E82 /* ZMainViewController.m in Sources */,
-				5E5D899820E21F4A0096536C /* LKDBUtils.m in Sources */,
-				5E5D899220E21F4A0096536C /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

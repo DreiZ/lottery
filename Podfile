@@ -6,5 +6,6 @@ target 'lottery' do
 	pod 'Masonry'
 	pod 'YYKit'
 	pod 'MBProgressHUD'
-	pod 'AFNetworking', '~> 3.0'
+        pod 'FMDB', '~> 2.7.2'
+	pod 'MJRefresh', '~> 3.1.15'
 end

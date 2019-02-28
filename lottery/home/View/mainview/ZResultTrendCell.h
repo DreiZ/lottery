@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZLotteryModel.h"
 
 
 @interface ZResultTrendCell : UITableViewCell
+@property (nonatomic,strong) ZLotteryModel *model;
+@property (nonatomic,strong) ZLotteryModel *beforeModel;
+@property (nonatomic,strong) ZLotteryModel *afterModel;
+
+- (void)setModel:(ZLotteryModel *)model before:(ZLotteryModel *)before after:(ZLotteryModel *)after;
+
 + (instancetype)cellWithTableView:(UITableView *)tableView ;
 + (CGFloat)getCellHeight:(id)sender ;
 @end
