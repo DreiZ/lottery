@@ -19,6 +19,11 @@
 
 @property (nonatomic,strong) UIView *topLineView;
 
+@property (nonatomic,strong) CAShapeLayer *upsolidShapeLayer_3;
+@property (nonatomic,strong) CAShapeLayer *upsolidShapeLayer_6;
+
+@property (nonatomic,strong) CAShapeLayer *downsolidShapeLayer_3;
+@property (nonatomic,strong) CAShapeLayer *downsolidShapeLayer_6;
 @end
 
 #define kLineSpace 4
@@ -297,6 +302,12 @@
     _beforeModel = before;
     _afterModel = after;
     
+    for (UIView *view  in self.contentView.subviews) {
+        if (view.tag == 123456) {
+            [view removeFromSuperview];
+        }
+    }
+    
     for (NSArray *tempArr in _labelArr) {
         for (UILabel *label in tempArr) {
             label.text = @"";
@@ -510,7 +521,11 @@
         CAShapeLayer *solidShapeLayer_6 = [CAShapeLayer layer];
         CGMutablePathRef solidShapePath_6 =  CGPathCreateMutable();
         [solidShapeLayer_6 setFillColor:[[UIColor clearColor] CGColor]];
-        [solidShapeLayer_6 setStrokeColor:[[UIColor orangeColor] CGColor]];
+        if ([[ZLotteryManager sharedManager] type:model] == 2) {
+            [solidShapeLayer_6 setStrokeColor:[[UIColor redColor] CGColor]];
+        }else{
+            [solidShapeLayer_6 setStrokeColor:[[UIColor blackColor] CGColor]];
+        }
         solidShapeLayer_6.lineWidth = 1.0f ;
         CGPathMoveToPoint(solidShapePath_6, NULL, before_diff_x, -(cellHeight/2));
         CGPathAddLineToPoint(solidShapePath_6, NULL, now_diff_x, (cellHeight/2));
@@ -518,6 +533,7 @@
         CGPathRelease(solidShapePath_6);
         [self.contentView.layer addSublayer:solidShapeLayer_6];
 //        [self.contentView.layer insertSublayer:solidShapeLayer_6 atIndex:4];
+        
     }
     
     now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth +CGFloatIn750(6);
@@ -563,7 +579,11 @@
         CAShapeLayer *solidShapeLayer_a6 = [CAShapeLayer layer];
         CGMutablePathRef solidShapePath_a6 =  CGPathCreateMutable();
         [solidShapeLayer_a6 setFillColor:[[UIColor clearColor] CGColor]];
-        [solidShapeLayer_a6 setStrokeColor:[[UIColor orangeColor] CGColor]];
+        if ([[ZLotteryManager sharedManager] type:after] == 2) {
+            [solidShapeLayer_a6 setStrokeColor:[[UIColor redColor] CGColor]];
+        }else{
+            [solidShapeLayer_a6 setStrokeColor:[[UIColor blackColor] CGColor]];
+        }
         solidShapeLayer_a6.lineWidth = 1.0f ;
 
         CGPathMoveToPoint(solidShapePath_a6, NULL, now_diff_x, (cellHeight/2));
@@ -576,6 +596,55 @@
     }
     
     
+
+    UILabel *_3Label = [[UILabel alloc] initWithFrame:CGRectZero];
+    _3Label.textColor = andLabel.textColor;
+    _3Label.text = andLabel.text;
+    _3Label.backgroundColor = andLabel.backgroundColor;
+    _3Label.tag = 123456;
+    _3Label.textAlignment = NSTextAlignmentCenter   ;
+    [_3Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(16)]];
+    [self.contentView addSubview:_3Label];
+    [_3Label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(andLabel);
+        make.height.width.mas_equalTo(CGFloatIn750(16));
+    }];
+
+    UILabel *_6Label = [[UILabel alloc] initWithFrame:CGRectZero];
+    _6Label.textColor = diffNumLabel.textColor;
+    _6Label.text = diffNumLabel.text;
+    _6Label.backgroundColor = diffNumLabel.backgroundColor;
+    _6Label.tag = 123456;
+    _6Label.textAlignment = NSTextAlignmentCenter ;
+    [_6Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(16)]];
+    [self.contentView addSubview:_6Label];
+    [_6Label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(diffNumLabel);
+        make.height.width.mas_equalTo(CGFloatIn750(16));
+    }];
+}
+
+
+/**
+ *  计算角度 x轴夹角
+ *  @param edge 线
+ *  @return 角度
+ */
+-(CGFloat)angleForStartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
+    
+    CGPoint Xpoint = CGPointMake(startPoint.x + 100, startPoint.y);
+    
+    CGFloat a = endPoint.x - startPoint.x;
+    CGFloat b = endPoint.y - startPoint.y;
+    CGFloat c = Xpoint.x - startPoint.x;
+    CGFloat d = Xpoint.y - startPoint.y;
+    
+    CGFloat rads = acos(((a*c) + (b*d)) / ((sqrt(a*a + b*b)) * (sqrt(c*c + d*d))));
+    
+    if (startPoint.y>endPoint.y) {
+        rads = -rads;
+    }
+    return rads;
 }
 
 + (CGFloat)getCellHeight:(id)sender {
