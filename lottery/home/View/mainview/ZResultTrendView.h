@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZLotteryModel.h"
 
 @interface ZResultTrendView : UIView
-
+- (void)addLottery:(ZLotteryModel *)model;
 @end
 

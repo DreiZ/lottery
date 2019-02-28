@@ -103,7 +103,10 @@
                 // Fallback on earlier versions
             }
         }
-//        _iTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth*1.4, 70)];
+        UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
+        bottomLineView.backgroundColor = [UIColor blackColor];
+        
+        _iTableView.tableFooterView = bottomLineView;
         _iTableView.delegate = self;
         _iTableView.dataSource = self;
     }
@@ -139,13 +142,27 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    return _lotteryArr.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    __weak typeof(self) weakSelf = self;
+//    __weak typeof(self) weakSelf = self;
     ZResultTrendCell *cell = [ZResultTrendCell cellWithTableView:tableView];
-   
+    
+    ZLotteryModel *before = nil;
+    ZLotteryModel *after = nil;
+    
+    
+    if (indexPath.row - 1 >= 0) {
+        before = _lotteryArr[indexPath.row - 1];
+    }
+    
+    if (indexPath.row + 1 < _lotteryArr.count) {
+        after = _lotteryArr[indexPath.row + 1];
+    }
+    
+    [cell setModel:_lotteryArr[indexPath.row] before:before after:after];
+    
     return cell;
 }
 
@@ -167,20 +184,31 @@
     
 }
 
-
-//刷新数据
+#pragma mark - 添加数据
+- (void)addLottery:(ZLotteryModel *)model {
+    [self.lotteryArr addObject:model];
+    [self.iTableView reloadData];
+}
+#pragma mark -//刷新数据
 - (void)p_tryToRefreshMoreRecord:(void (^)(NSInteger count, BOOL hasMore))complete
 {
+    [self.iTableView setMj_header:self.refresHeader];
+    
     __weak typeof(self) weakSelf = self;
     [[ZLotteryManager sharedManager] lotteryRecordForFromDate:_curDate count:20 complete:^(NSArray *array, NSDate* date, BOOL hasMore) {
         if (array.count > 0 && [date isEqualToDate:weakSelf.curDate]) {
-            weakSelf.curDate = [array[0] date];
+            weakSelf.curDate = [array[0] lottery_day];
             [weakSelf.lotteryArr insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, array.count)]];
-//            complete(array. count, hasMore);
+
+            [weakSelf.iTableView reloadData];
+        }else {
+            [weakSelf.iTableView reloadData];
         }
-        else {
-//            complete(0, hasMore);
+        
+        if (!hasMore) {
+            weakSelf.iTableView.mj_header = nil;
         }
+
     }];
 }
 @end

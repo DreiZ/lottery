@@ -30,7 +30,7 @@
 
 
 #define     SQL_SELECT_LOTTERY_PAGE         @"SELECT * FROM %@ WHERE date < '%@' order by date desc LIMIT '%ld'"
-#define     SQL_SELECT_LAST_LOTTERY         @"SELECT * FROM %@ WHERE lid = ( SELECT MAX(lid))"
+#define     SQL_SELECT_LAST_LOTTERY         @"SELECT * FROM %@ WHERE date = ( SELECT MAX(date) FROM %@)"
 
 
 #define     SQL_DELETE_LOTTERY_ID           @"DELETE FROM %@ WHERE lid = '%@'"

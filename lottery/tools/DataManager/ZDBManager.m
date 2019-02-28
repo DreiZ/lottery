@@ -40,7 +40,7 @@ static ZDBManager *manager;
 
 - (NSString *)pathDBCommon
 {
-    NSString *path = [NSString stringWithFormat:@"/"];
+    NSString *path = [NSString stringWithFormat:@"%@/",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         NSError *error;

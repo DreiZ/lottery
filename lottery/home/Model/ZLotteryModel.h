@@ -11,7 +11,7 @@
 
 @interface ZLotteryModel : ZBaseModel
 @property(nonatomic, strong) NSString *lottery_id;
-@property (nonatomic,strong) NSString *lottert_serial_number;
+@property(nonatomic, strong) NSString *lottert_serial_number;
 
 @property(nonatomic, strong) NSString *lottery_num1;
 @property(nonatomic, strong) NSString *lottery_num2;

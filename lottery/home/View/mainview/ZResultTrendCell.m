@@ -17,8 +17,14 @@
 @property (nonatomic,strong) NSMutableArray *label3DownArr;
 @property (nonatomic,strong) NSMutableArray *label6DownArr;
 
-@property (nonatomic,strong) UIView *bottomLineView;
+@property (nonatomic,strong) UIView *topLineView;
 
+
+@property (nonatomic,strong) UIView *up3Line;
+@property (nonatomic,strong) UIView *up6Line;
+
+@property (nonatomic,strong) UIView *down3Line;
+@property (nonatomic,strong) UIView *down6Line;
 @end
 
 
@@ -98,6 +104,8 @@
         
         NSArray *subArr = _titleArr[i];
         UIView *subTempView = nil;
+        
+        NSMutableArray *tempLabelArr = @[].mutableCopy;
         for (int j = 0; j < subArr.count; j++) {
             UILabel *subTempLabel = [self getLabel:subArr[j] titleColor:[UIColor blackColor] backGroundColor:[UIColor whiteColor]];
             [contentView addSubview:subTempLabel];
@@ -116,7 +124,7 @@
                     make.width.equalTo(contentView.mas_width).multipliedBy(1.0f/subArr.count);
                 }];
             }
-            [_labelArr addObject:subTempLabel];
+            [tempLabelArr addObject:subTempLabel];
             subTempView = subTempLabel;
             if (i == 3) {
                 UILabel *upTempLabel = [self getLabel:subArr[j] titleColor:[UIColor blackColor] backGroundColor:[UIColor whiteColor]];
@@ -164,9 +172,67 @@
                 [_label6DownArr addObject:downTempLabel];
             }
         }
+        
+        [_labelArr addObject:tempLabelArr];
     }
+    
+    
+    _topLineView = [[UIView alloc] initWithFrame:CGRectZero];
+    _topLineView.backgroundColor = [UIColor blackColor];
+    [self.contentView addSubview:_topLineView];
+    [_topLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(self);
+        make.height.mas_equalTo(1);
+    }];
+    UIView *rightLineView = [[UIView alloc] initWithFrame:CGRectZero];
+    rightLineView.backgroundColor = [UIColor blackColor];
+    [self.contentView addSubview:rightLineView];
+    [rightLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.right.bottom.equalTo(self);
+        make.width.mas_equalTo(0.5);
+    }];
+    
+    [self.contentView addSubview:self.up3Line];
+    [self.contentView addSubview:self.up6Line];
+    [self.contentView addSubview:self.down3Line];
+    [self.contentView addSubview:self.down6Line];
 }
 
+- (UIView *)up3Line {
+    if (!_up3Line) {
+        _up3Line = [[UIView alloc] init];
+        _up3Line.backgroundColor = [UIColor blackColor];
+    }
+    
+    return _up3Line;
+}
+
+- (UIView *)up6Line {
+    if (!_up6Line) {
+        _up6Line = [[UIView alloc] init];
+        _up6Line.backgroundColor = [UIColor blackColor];
+    }
+    
+    return _up6Line;
+}
+
+- (UIView *)down3Line {
+    if (!_down3Line) {
+        _down3Line = [[UIView alloc] init];
+        _down3Line.backgroundColor = [UIColor blackColor];
+    }
+    
+    return _down3Line;
+}
+
+- (UIView *)down6Line {
+    if (!_down6Line) {
+        _down6Line = [[UIView alloc] init];
+        _down6Line.backgroundColor = [UIColor blackColor];
+    }
+    
+    return _down6Line;
+}
 
 
 - (UILabel *)getLabel:(NSString *)title titleColor:(UIColor*)titleColor backGroundColor:(UIColor *)backColor{
@@ -232,22 +298,26 @@
     if ([[ZLotteryManager sharedManager] isBig:model]) {
         UILabel *bigLabel = _labelArr[4][0];
         bigLabel.text = @"大";
+        bigLabel.textColor = [UIColor purpleColor];
     }else{
         UILabel *smallLabel = _labelArr[4][1];
         smallLabel.text = @"小";
+        smallLabel.textColor = [UIColor purpleColor];
     }
     
     if ([[ZLotteryManager sharedManager] isDouble:model]) {
         UILabel *bigLabel = _labelArr[5][1];
         bigLabel.text = @"双";
+        bigLabel.textColor = [UIColor blueColor];
     }else{
         UILabel *smallLabel = _labelArr[5][0];
         smallLabel.text = @"单";
+        smallLabel.textColor = [UIColor blueColor];
     }
     
     NSInteger diffNum = [[ZLotteryManager sharedManager] diff:model];
      UILabel *diffNumLabel = _labelArr[6][diffNum];
-    diffNumLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+    diffNumLabel.text = [NSString stringWithFormat:@"%ld", diffNum];
     
     if (before) {
         NSInteger numAnd = [[ZLotteryManager sharedManager] numAnd:before];
@@ -267,6 +337,80 @@
         NSInteger diffNum = [[ZLotteryManager sharedManager] diff:after];
         UILabel *diffNumLabel = _label6DownArr[diffNum];
         diffNumLabel.text = [NSString stringWithFormat:@"%ld", numAnd];
+    }
+    
+    //颜色样式
+    if ([model.lottert_serial_number integerValue] == 1) {
+        _topLineView.hidden = NO;
+    }else{
+        _topLineView.hidden = YES;
+    }
+    
+
+    
+    andLabel.textColor = [UIColor blackColor];
+    diffNumLabel.textColor = [UIColor blackColor];
+    ///1:3数相等 2:2数相等 3:顺子 4:普通号
+    if ([[ZLotteryManager sharedManager] type:model] == 1) {
+        num1Label.textColor = [UIColor blueColor];
+        num2Label.textColor = [UIColor blueColor];
+        num3Label.textColor = [UIColor blueColor];
+        
+        
+        NSArray *spanArr = [[ZLotteryManager sharedManager] span:model];
+        for (NSString *num in spanArr) {
+            UILabel *spanLabel = _labelArr[2][[num integerValue]-1];
+            spanLabel.textColor = [UIColor blueColor];
+        }
+        
+        diffNumLabel.textColor = [UIColor blueColor];
+    }else if ([[ZLotteryManager sharedManager] type:model] == 2){
+        num1Label.textColor = [UIColor redColor];
+        num2Label.textColor = [UIColor redColor];
+        num3Label.textColor = [UIColor redColor];
+        
+        
+        
+        NSString *index = nil;
+        if ([model.lottery_num1 isEqualToString:model.lottery_num2] ) {
+            index = model.lottery_num1;
+        }else if ([model.lottery_num3 isEqualToString:model.lottery_num2]){
+            index = model.lottery_num2;
+        }
+        
+        NSArray *spanArr = [[ZLotteryManager sharedManager] span:model];
+        
+        for (NSString *num in spanArr) {
+            UILabel *spanLabel = _labelArr[2][[num integerValue]-1];
+            if ([num isEqualToString:index]) {
+                spanLabel.textColor = [UIColor redColor];
+            }else{
+                spanLabel.textColor = [UIColor blackColor];
+            }
+        }
+        
+        andLabel.textColor = [UIColor redColor];
+        diffNumLabel.textColor = [UIColor redColor];
+    }else if ([[ZLotteryManager sharedManager] type:model] == 3){
+        num1Label.textColor = [UIColor blackColor];
+        num2Label.textColor = [UIColor blackColor];
+        num3Label.textColor = [UIColor blackColor];
+        
+        NSArray *spanArr = [[ZLotteryManager sharedManager] span:model];
+        for (NSString *num in spanArr) {
+            UILabel *spanLabel = _labelArr[2][[num integerValue]-1];
+            spanLabel.textColor = [UIColor colorWithRed:0 green:199.0f/255.0f blue:250.0f/5 alpha:1];
+        }
+    }else if ([[ZLotteryManager sharedManager] type:model] == 4){
+        num1Label.textColor = [UIColor blackColor];
+        num2Label.textColor = [UIColor blackColor];
+        num3Label.textColor = [UIColor blackColor];
+        
+        NSArray *spanArr = [[ZLotteryManager sharedManager] span:model];
+        for (NSString *num in spanArr) {
+            UILabel *spanLabel = _labelArr[2][[num integerValue]-1];
+            spanLabel.textColor = [UIColor blackColor];
+        }
     }
 }
 

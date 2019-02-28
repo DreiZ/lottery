@@ -50,7 +50,7 @@
     titleLabel.text = @"开奖：";
     titleLabel.numberOfLines = 0;
     titleLabel.textAlignment = NSTextAlignmentLeft;
-    [titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
+    [titleLabel setFont:[UIFont systemFontOfSize:14.0f * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contView.mas_left).offset(40);
@@ -88,7 +88,7 @@
     sureBtn.layer.borderWidth = 1;
     [sureBtn setTitle:@"开奖" forState:UIControlStateNormal];
     [sureBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [sureBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [sureBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:sureBtn];
     [sureBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(60);
@@ -102,10 +102,11 @@
 - (UITextField *)firstTF {
     if (!_firstTF ) {
         _firstTF = [[UITextField alloc] init];
-        [_firstTF setFont:[UIFont systemFontOfSize:14]];
+        [_firstTF setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
         [_firstTF setBorderStyle:UITextBorderStyleNone];
         [_firstTF setBackgroundColor:[UIColor clearColor]];
         [_firstTF setPlaceholder:@""];
+        _firstTF.keyboardType = UIKeyboardTypeNumberPad;
         _firstTF.tag = 1;
         _firstTF.textAlignment = NSTextAlignmentCenter;
         //        _inputTF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -123,10 +124,11 @@
 - (UITextField *)secondTF {
     if (!_secondTF ) {
         _secondTF = [[UITextField alloc] init];
-        [_secondTF setFont:[UIFont systemFontOfSize:14]];
+        [_secondTF setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
         [_secondTF setBorderStyle:UITextBorderStyleNone];
         [_secondTF setBackgroundColor:[UIColor clearColor]];
         [_secondTF setPlaceholder:@""];
+        _secondTF.keyboardType = UIKeyboardTypeNumberPad;
         _secondTF.tag = 2;
         _secondTF.textAlignment = NSTextAlignmentCenter;
         //        _inputTF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -143,10 +145,11 @@
 - (UITextField *)thridTF {
     if (!_thridTF ) {
         _thridTF = [[UITextField alloc] init];
-        [_thridTF setFont:[UIFont systemFontOfSize:14]];
+        [_thridTF setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
         [_thridTF setBorderStyle:UITextBorderStyleNone];
         [_thridTF setBackgroundColor:[UIColor clearColor]];
         [_thridTF setPlaceholder:@""];
+        _thridTF.keyboardType = UIKeyboardTypeNumberPad;
         _thridTF.tag = 3;
         _thridTF.textAlignment = NSTextAlignmentCenter;
         //        _inputTF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -175,8 +178,16 @@
         textField.text = str;
     }
     
-    if (_valueChange) {
-        _valueChange(textField.text);
+    if (textField == _firstTF && textField.text.length > 0) {
+        [_secondTF becomeFirstResponder];
+    }
+    
+    if (textField == _secondTF && textField.text.length > 0) {
+        [_thridTF becomeFirstResponder];
+    }
+    
+    if (textField == _thridTF && textField.text.length > 0) {
+        [_thridTF resignFirstResponder];
     }
     
 }
@@ -195,7 +206,24 @@
 
 
 - (void)sureBtnOnclick:(id)sender {
-    
+    if (_firstTF.text && _firstTF.text.length > 0 && _secondTF.text && _secondTF.text.length > 0 && _thridTF.text && _thridTF.text.length > 0) {
+        if ([_firstTF.text integerValue] <=0 || [_firstTF.text integerValue] > 6 || [_secondTF.text integerValue] <=0 || [_secondTF.text integerValue] > 6 || [_thridTF.text integerValue] <=0 || [_thridTF.text integerValue] > 6) {
+            
+            return;
+        }
+        
+        
+        ZLotteryModel *model = [[ZLotteryManager sharedManager] saveLotteryWithNum1:_firstTF.text num2:_secondTF.text num3:_thridTF.text];
+        if (_addLotteryBlock) {
+            _addLotteryBlock(model);
+        }
+        
+        _firstTF.text = nil;
+        _secondTF.text = nil;
+        _thridTF.text = nil;
+    }else{
+        
+    }
 }
 
 @end

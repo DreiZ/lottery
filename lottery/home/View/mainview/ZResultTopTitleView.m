@@ -63,7 +63,7 @@
     titleLabel.text = @"期号";
     titleLabel.numberOfLines = 0;
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    [titleLabel setFont:[UIFont systemFontOfSize:13.0f]];
+    [titleLabel setFont:[UIFont systemFontOfSize:13.0f * [ZLotteryManager sharedManager].fontMultiple]];
     [self addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.mas_width).multipliedBy(UnitWidth);
@@ -176,7 +176,7 @@
     tempLabel.text = title;
     tempLabel.numberOfLines = 0;
     tempLabel.textAlignment = NSTextAlignmentCenter;
-    [tempLabel setFont:[UIFont systemFontOfSize:13]];
+    [tempLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
 //    [self addSubview:tempLabel];
     return tempLabel;
 }

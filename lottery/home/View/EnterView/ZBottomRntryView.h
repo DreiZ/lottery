@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZLotteryModel.h"
 
 @interface ZBottomRntryView : UIView
-@property (nonatomic,strong) void (^valueChange)(NSString *);
+@property (nonatomic,strong) void (^addLotteryBlock)(ZLotteryModel *);
 @end
 

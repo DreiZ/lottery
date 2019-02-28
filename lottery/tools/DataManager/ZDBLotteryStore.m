@@ -14,7 +14,7 @@
 - (id)init
 {
     if (self = [super init]) {
-        self.dbQueue = [ZDBManager sharedInstance].messageQueue;
+        self.dbQueue = [ZDBManager sharedInstance].commonQueue;
         BOOL ok = [self createTable];
         if (!ok) {
             NSLog(@"DB: 记录表创建失败");
@@ -31,7 +31,8 @@
 
 - (BOOL)addLottery:(ZLotteryModel *)lottery
 {
-    if (lottery == nil || lottery.lottery_id ) {
+    if (lottery == nil || !lottery.lottery_id ) {
+        NSLog(@"返回----------_");
         return NO;
     }
     
@@ -46,6 +47,9 @@
                         TLTimeStamp(lottery.lottery_day),
                         @"", @"", @"", @"", @"", nil];
     BOOL ok = [self excuteSQL:sqlString withArrParameter:arrPara];
+    if (ok) {
+        NSLog(@"保存成功");
+    }
     return ok;
 }
 
@@ -74,7 +78,7 @@
 
 - (ZLotteryModel *)lastLottery
 {
-    NSString *sqlString = [NSString stringWithFormat:SQL_SELECT_LAST_LOTTERY, LOTTERY_TABLE_NAME];
+    NSString *sqlString = [NSString stringWithFormat:SQL_SELECT_LAST_LOTTERY, LOTTERY_TABLE_NAME, LOTTERY_TABLE_NAME];
     __block ZLotteryModel * lottery;
     [self excuteQuerySQL:sqlString resultBlock:^(FMResultSet *retSet) {
         while ([retSet next]) {

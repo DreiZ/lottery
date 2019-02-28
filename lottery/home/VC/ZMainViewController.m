@@ -88,7 +88,11 @@
 
 - (ZBottomRntryView *)entryView {
     if (!_entryView) {
+        __weak typeof(self) weakSelf = self;
         _entryView = [[ZBottomRntryView alloc] init];
+        _entryView.addLotteryBlock = ^(ZLotteryModel * model) {
+            [weakSelf.trendView addLottery:model];
+        };
     }
     return _entryView;
 }

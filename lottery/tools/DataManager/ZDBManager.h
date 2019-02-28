@@ -17,10 +17,6 @@
  */
 @property (nonatomic, strong) FMDatabaseQueue *commonQueue;
 
-/**
- *  与IM相关的DB队列
- */
-@property (nonatomic, strong) FMDatabaseQueue *messageQueue;
 
 + (ZDBManager *)sharedInstance;
 @end
