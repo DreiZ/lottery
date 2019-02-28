@@ -10,6 +10,9 @@
 #import "ZLotteryModel.h"
 
 @interface ZResultTrendView : UIView
+@property (nonatomic,strong) void (^scrollBlock)(void);
+
 - (void)addLottery:(ZLotteryModel *)model;
+
 @end
 

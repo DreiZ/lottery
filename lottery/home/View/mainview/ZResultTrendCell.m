@@ -471,15 +471,23 @@
     CGFloat now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth;
     
     NSInteger now_diffNum = [[ZLotteryManager sharedManager] diff:model];
-    CGFloat now_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (now_diffNum + 0.5) * unitScreenWidth * UnitWidth;
+    CGFloat now_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (now_diffNum + 0.5) * unitScreenWidth * UnitWidth + CGFloatIn750(6);
     
     if (before) {
         
         NSInteger before_numAnd = [[ZLotteryManager sharedManager] numAnd:before];
         CGFloat before_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (before_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+//
+//        if (before_and_x > now_and_x) {
+//            before_and_x -= CGFloatIn750(6);
+//            now_and_x += CGFloatIn750(6);
+//        }else if (before_and_x < now_and_x){
+//            before_and_x += CGFloatIn750(6);
+//            now_and_x -= CGFloatIn750(6);
+//        }
         
         NSInteger before_diffNum = [[ZLotteryManager sharedManager] diff:before];
-        CGFloat before_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (before_diffNum + 0.5) * unitScreenWidth * UnitWidth;
+        CGFloat before_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (before_diffNum + 0.5) * unitScreenWidth * UnitWidth+CGFloatIn750(6);
         
         
         CAShapeLayer *solidShapeLayer_3 = [CAShapeLayer layer];
@@ -497,7 +505,7 @@
         [solidShapeLayer_3 setPath:solidShapePath_3];
         CGPathRelease(solidShapePath_3);
         [self.contentView.layer addSublayer:solidShapeLayer_3];
-        
+//        [self.contentView.layer insertSublayer:solidShapeLayer_3 atIndex:4];
         
         CAShapeLayer *solidShapeLayer_6 = [CAShapeLayer layer];
         CGMutablePathRef solidShapePath_6 =  CGPathCreateMutable();
@@ -509,14 +517,27 @@
         [solidShapeLayer_6 setPath:solidShapePath_6];
         CGPathRelease(solidShapePath_6);
         [self.contentView.layer addSublayer:solidShapeLayer_6];
+//        [self.contentView.layer insertSublayer:solidShapeLayer_6 atIndex:4];
     }
+    
+    now_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (now_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+    
+    now_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (now_diffNum + 0.5) * unitScreenWidth * UnitWidth + CGFloatIn750(6);
     
     if (after) {
         NSInteger after_numAnd = [[ZLotteryManager sharedManager] numAnd:after];
         CGFloat after_and_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 10) + (after_numAnd - 2.5) * unitScreenWidth * UnitWidth;
+        
+//        if (after_and_x > now_and_x) {
+//            after_and_x -= CGFloatIn750(6);
+//            now_and_x += CGFloatIn750(6);
+//        }else if (after_and_x < now_and_x){
+//            after_and_x += CGFloatIn750(6);
+//            now_and_x -= CGFloatIn750(6);
+//        }
 
         NSInteger after_diffNum = [[ZLotteryManager sharedManager] diff:after];
-        CGFloat after_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (after_diffNum + 0.5) * unitScreenWidth * UnitWidth;
+        CGFloat after_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (after_diffNum + 0.5) * unitScreenWidth * UnitWidth+CGFloatIn750(6);
 
         CAShapeLayer *solidShapeLayer_a3 = [CAShapeLayer layer];
         CGMutablePathRef solidShapePath_a3 =  CGPathCreateMutable();
@@ -529,13 +550,14 @@
         
         solidShapeLayer_a3.lineWidth = 1.0f ;
 
-        CGPathMoveToPoint(solidShapePath_a3, NULL, now_and_x, (cellHeight/2) + (13 * [ZLotteryManager sharedManager].fontMultiple)/2);
+        CGPathMoveToPoint(solidShapePath_a3, NULL, now_and_x, (cellHeight/2) );
         CGPathAddLineToPoint(solidShapePath_a3, NULL, after_and_x,cellHeight + (cellHeight/2));
 
 
         [solidShapeLayer_a3 setPath:solidShapePath_a3];
         CGPathRelease(solidShapePath_a3);
         [self.contentView.layer addSublayer:solidShapeLayer_a3];
+//        [self.contentView.layer insertSublayer:solidShapeLayer_a3 atIndex:5];
 
 
         CAShapeLayer *solidShapeLayer_a6 = [CAShapeLayer layer];
@@ -544,12 +566,13 @@
         [solidShapeLayer_a6 setStrokeColor:[[UIColor orangeColor] CGColor]];
         solidShapeLayer_a6.lineWidth = 1.0f ;
 
-        CGPathMoveToPoint(solidShapePath_a6, NULL, now_diff_x, (cellHeight/2) + (13 * [ZLotteryManager sharedManager].fontMultiple)/2);
+        CGPathMoveToPoint(solidShapePath_a6, NULL, now_diff_x, (cellHeight/2));
         CGPathAddLineToPoint(solidShapePath_a6, NULL, after_diff_x, cellHeight + (cellHeight/2));
 
         [solidShapeLayer_a6 setPath:solidShapePath_a6];
         CGPathRelease(solidShapePath_a6);
         [self.contentView.layer addSublayer:solidShapeLayer_a6];
+//        [self.contentView.layer insertSublayer:solidShapeLayer_a6 atIndex:5];
     }
     
     

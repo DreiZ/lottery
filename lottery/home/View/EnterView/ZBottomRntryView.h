@@ -11,5 +11,7 @@
 
 @interface ZBottomRntryView : UIView
 @property (nonatomic,strong) void (^addLotteryBlock)(ZLotteryModel *);
+@property (nonatomic,strong) void (^cuteBlock)(void);
+@property (nonatomic,strong) void (^hiddenBlock)(void);
 @end
 

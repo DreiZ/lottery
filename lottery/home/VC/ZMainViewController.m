@@ -58,7 +58,7 @@
     [self.view addSubview:self.trendView];
     [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).offset(kStatusBarHeight);
+        make.top.equalTo(self.view.mas_top).offset(kTabBarMoreHeight);
         make.bottom.equalTo(self.entryView.mas_top);
     }];
     
@@ -100,13 +100,31 @@
         _entryView.addLotteryBlock = ^(ZLotteryModel * model) {
             [weakSelf.trendView addLottery:model];
         };
+        
+        _entryView.cuteBlock = ^{
+            [weakSelf savePictureToPhotoAlbum];
+        };
+        
+        _entryView.hiddenBlock = ^{
+            [weakSelf.entryView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.bottom.right.equalTo(weakSelf.view);
+                make.height.mas_equalTo(0.01);
+            }];
+        };
     }
     return _entryView;
 }
 
 - (ZResultTrendView *)trendView {
     if (!_trendView) {
+        __weak typeof(self) weakSelf = self;
         _trendView = [[ZResultTrendView alloc] init];
+        _trendView.scrollBlock = ^{
+            [weakSelf.entryView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.bottom.right.equalTo(weakSelf.view);
+                make.height.mas_equalTo(50 + kTabBarMoreHeight);
+            }];
+        };
     }
     return _trendView;
 }
@@ -132,4 +150,29 @@
     }
 }
 
+
+
+#pragma mark 截图处理
+- (UIImage *)nomalSnapshotImage
+{
+    UIGraphicsBeginImageContextWithOptions(self.trendView.size, NO, [UIScreen mainScreen].scale);
+    [self.trendView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return snapshotImage;
+}
+
+- (void)savePictureToPhotoAlbum {
+    UIImage * img = [self nomalSnapshotImage];
+    UIImageWriteToSavedPhotosAlbum(img, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (error == nil) {
+        [self showSuccessWithMsg:@"截图已保存到系统相册"];
+    } else {
+        [self showErrorWithMsg:@"截图失败"];
+    }
+}
 @end

@@ -215,4 +215,10 @@
 
     }];
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (_scrollBlock) {
+        _scrollBlock();
+    }
+}
 @end
