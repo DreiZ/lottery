@@ -151,7 +151,7 @@ static ZLotteryManager *sharedManager;
             if ([descendingArr[j] intValue] > [descendingArr[j + 1] intValue]) {
                 int tmp = [descendingArr[j] intValue];
                 descendingArr[j] = descendingArr[j + 1];
-                descendingArr[j + 1] = [NSNumber numberWithInt:tmp];
+                descendingArr[j + 1] = [NSString stringWithFormat:@"%d",tmp];
             }
         }
     }
