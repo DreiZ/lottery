@@ -40,14 +40,23 @@
 //默认页面背景色
 #define KBackColor [UIColor colorWithHexString:@"f3f3f3"]
 //默认内容页面背景色
-#define KContentBackColor [UIColor colorWithHexString:@"e8e8e8"]
+#define KContentBackColor [UIColor colorWithHexString:@"c7c7c7"]
 
 //分割线颜色
 #define CLineColor [UIColor colorWithHexString:@"999999"]
 
-#define UnitWidth  (1/36.0f)
-#define cellHeight  (30.0f)
 
+#define kBlackColor [UIColor colorWithHexString:@"000000"]
+
+#define kPurpleColor [UIColor colorWithHexString:@"551179"]
+
+#define kBlueColor [UIColor colorWithHexString:@"140f78"]
+
+#define kBlueCColor [UIColor colorWithHexString:@"1265a0"]
+
+#define UnitWidth  (1/36.0f)
+#define cellHeight  (CGFloatIn750(28.0f))
+#define unitScreenWidth (screenWidth - 2)
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

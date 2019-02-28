@@ -58,12 +58,12 @@
     
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textColor = kBlackColor;
     titleLabel.backgroundColor = [UIColor whiteColor];
     titleLabel.text = @"期号";
     titleLabel.numberOfLines = 0;
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    [titleLabel setFont:[UIFont systemFontOfSize:13.0f * [ZLotteryManager sharedManager].fontMultiple]];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(18) * [ZLotteryManager sharedManager].fontMultiple]];
     [self addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.mas_width).multipliedBy(UnitWidth);
@@ -112,6 +112,7 @@
         UIView *subTempView = nil;
         for (int j = 0; j < subArr.count; j++) {
             UILabel *subTempLabel = [self getLabel:subArr[j] titleColor:[UIColor blackColor] backGroundColor:[UIColor whiteColor]];
+            subTempLabel.font = [UIFont boldSystemFontOfSize:CGFloatIn750(16) * [ZLotteryManager sharedManager].fontMultiple];
             [contentView addSubview:subTempLabel];
             if (subTempView) {
                 [subTempLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -176,7 +177,7 @@
     tempLabel.text = title;
     tempLabel.numberOfLines = 0;
     tempLabel.textAlignment = NSTextAlignmentCenter;
-    [tempLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
+    [tempLabel setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(18) * [ZLotteryManager sharedManager].fontMultiple]];
 //    [self addSubview:tempLabel];
     return tempLabel;
 }

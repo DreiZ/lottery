@@ -55,20 +55,27 @@
         make.height.mas_equalTo(50 + kTabBarMoreHeight);
     }];
     
-    [self.view addSubview:self.iScrollView];
-    [self.iScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.trendView];
+    [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.top.equalTo(self.view.mas_top).offset(kStatusBarHeight);
         make.bottom.equalTo(self.entryView.mas_top);
     }];
     
-    [self.iScrollView addSubview:self.trendView];
-    [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(4);
-        make.height.mas_equalTo(kScreenHeight);
-        make.top.mas_equalTo(4);
-        make.width.mas_equalTo(kScreenWidth*1.4+2);
-    }];
+//    [self.view addSubview:self.iScrollView];
+//    [self.iScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.equalTo(self.view);
+//        make.top.equalTo(self.view.mas_top).offset(kStatusBarHeight);
+//        make.bottom.equalTo(self.entryView.mas_top);
+//    }];
+//
+//    [self.iScrollView addSubview:self.trendView];
+//    [self.trendView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(4);
+//        make.height.mas_equalTo(kScreenHeight);
+//        make.top.mas_equalTo(4);
+//        make.width.mas_equalTo(kScreenWidth*1.4+2);
+//    }];
 }
 
 
@@ -81,7 +88,7 @@
         _iScrollView.showsVerticalScrollIndicator = NO;
         _iScrollView.showsHorizontalScrollIndicator = NO;
         _iScrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-        _iScrollView.contentSize = CGSizeMake(kScreenWidth * 1.4 + 14, 0);
+        _iScrollView.contentSize = CGSizeMake(0, 0);
     }
     return _iScrollView;
 }

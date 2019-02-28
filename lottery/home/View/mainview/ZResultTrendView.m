@@ -46,13 +46,17 @@
     
     [self addSubview:self.titleView];
     [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.equalTo(self);
-        make.height.mas_equalTo(100);
+        make.top.equalTo(self.mas_top).offset(kStatusBarHeight);
+        make.left.equalTo(self.mas_left).offset(1);
+        make.right.equalTo(self.mas_right).offset(-1);
+        make.height.mas_equalTo(CGFloatIn750(64));
     }];
     
     [self addSubview:self.iTableView];
     [self.iTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.right.equalTo(self);
+        make.bottom.equalTo(self);
+        make.left.equalTo(self.mas_left).offset(1);
+        make.right.equalTo(self.mas_right).offset(-1);
         make.top.equalTo(self.titleView.mas_bottom);
     }];
     

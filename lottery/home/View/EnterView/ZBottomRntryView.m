@@ -86,7 +86,7 @@
     sureBtn.layer.cornerRadius = 18;
     sureBtn.layer.borderColor = [UIColor redColor].CGColor;
     sureBtn.layer.borderWidth = 1;
-    [sureBtn setTitle:@"开奖" forState:UIControlStateNormal];
+    [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
     [sureBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [sureBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:sureBtn];
