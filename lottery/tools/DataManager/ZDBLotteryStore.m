@@ -58,7 +58,7 @@
                  complete:(void (^)(NSArray *, BOOL))complete
 {
     __block NSMutableArray *data = [[NSMutableArray alloc] init];
-    NSString *sqlString = [NSString stringWithFormat:SQL_SELECT_LOTTERY_PAGE, LOTTERY_TABLE_NAME, date,(long)(count + 1)];
+    NSString *sqlString = [NSString stringWithFormat:SQL_SELECT_LOTTERY_PAGE, LOTTERY_TABLE_NAME, TLTimeStamp(date),(long)(count + 1)];
 
     [self excuteQuerySQL:sqlString resultBlock:^(FMResultSet *retSet) {
         while ([retSet next]) {
