@@ -33,9 +33,9 @@
 
 + (instancetype)cellWithTableView:(UITableView *)tableView {
     static NSString *identifier = @"ZResultTrendCell";
-    ZResultTrendCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    ZResultTrendCell *cell = nil;
     if (cell == nil) {
-        cell = [[ZResultTrendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[ZResultTrendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
