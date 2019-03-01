@@ -332,7 +332,12 @@
     }
     
     UILabel *idLabel = _labelArr[0][0];
-    idLabel.text = model.lottert_serial_number;
+    
+    if ([model.lottert_serial_number integerValue] <= 9) {
+        idLabel.text = [NSString stringWithFormat:@"0%@",model.lottert_serial_number];
+    }else{
+        idLabel.text = model.lottert_serial_number;
+    }
     
     UILabel *num1Label = _labelArr[1][0];
     UILabel *num2Label = _labelArr[1][1];
@@ -609,7 +614,7 @@
     [self.contentView addSubview:_3Label];
     [_3Label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(andLabel);
-        make.height.width.mas_equalTo(9);
+//        make.height.width.mas_equalTo(9);
     }];
 
     UILabel *_6Label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -622,7 +627,7 @@
     [self.contentView addSubview:_6Label];
     [_6Label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(diffNumLabel);
-        make.height.width.mas_equalTo(9);
+//        make.height.width.mas_equalTo(9);
     }];
     _6Label.adjustsFontSizeToFitWidth = YES;
     _3Label.adjustsFontSizeToFitWidth = YES;
