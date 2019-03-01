@@ -62,6 +62,11 @@
     _label3DownArr = @[].mutableCopy;
     _label6DownArr = @[].mutableCopy;
     
+    _upsolidShapeLayer_3 = [CAShapeLayer layer];
+    _upsolidShapeLayer_6 = [CAShapeLayer layer];
+    _downsolidShapeLayer_3 = [CAShapeLayer layer];
+    _downsolidShapeLayer_6 = [CAShapeLayer layer];
+    
     _titleArr = @[@[@""],
                   @[@"",@"",@""],
                   @[@"",@"",@"",@"",@"",@""],
@@ -508,7 +513,7 @@
         CGFloat before_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (before_diffNum + 0.5) * unitScreenWidth * UnitWidth+CGFloatIn750(6);
         
         
-        CAShapeLayer *solidShapeLayer_3 = [CAShapeLayer layer];
+        CAShapeLayer *solidShapeLayer_3 = _upsolidShapeLayer_3;
         CGMutablePathRef solidShapePath_3 =  CGPathCreateMutable();
         [solidShapeLayer_3 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:model] == 2) {
@@ -525,7 +530,7 @@
         [self.contentView.layer addSublayer:solidShapeLayer_3];
 //        [self.contentView.layer insertSublayer:solidShapeLayer_3 atIndex:4];
         
-        CAShapeLayer *solidShapeLayer_6 = [CAShapeLayer layer];
+        CAShapeLayer *solidShapeLayer_6 = _upsolidShapeLayer_6;
         CGMutablePathRef solidShapePath_6 =  CGPathCreateMutable();
         [solidShapeLayer_6 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:model] == 2) {
@@ -562,7 +567,7 @@
         NSInteger after_diffNum = [[ZLotteryManager sharedManager] diff:after];
         CGFloat after_diff_x = ([ZLotteryManager sharedManager].contWidthMultiple * unitScreenWidth * UnitWidth * 30) + (after_diffNum + 0.5) * unitScreenWidth * UnitWidth+CGFloatIn750(6);
 
-        CAShapeLayer *solidShapeLayer_a3 = [CAShapeLayer layer];
+        CAShapeLayer *solidShapeLayer_a3 = _downsolidShapeLayer_3;
         CGMutablePathRef solidShapePath_a3 =  CGPathCreateMutable();
         [solidShapeLayer_a3 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:after] == 2) {
@@ -583,7 +588,7 @@
 //        [self.contentView.layer insertSublayer:solidShapeLayer_a3 atIndex:5];
 
 
-        CAShapeLayer *solidShapeLayer_a6 = [CAShapeLayer layer];
+        CAShapeLayer *solidShapeLayer_a6 = _downsolidShapeLayer_6;
         CGMutablePathRef solidShapePath_a6 =  CGPathCreateMutable();
         [solidShapeLayer_a6 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:after] == 2) {
