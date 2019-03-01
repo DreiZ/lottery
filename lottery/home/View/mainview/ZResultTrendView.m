@@ -204,6 +204,7 @@
     
     __weak typeof(self) weakSelf = self;
     [[ZLotteryManager sharedManager] lotteryRecordForFromDate:_curDate count:20 complete:^(NSArray *array, NSDate* date, BOOL hasMore) {
+        [weakSelf.iTableView.mj_header endRefreshing];
         if (array.count > 0 && [date isEqualToDate:weakSelf.curDate]) {
             weakSelf.curDate = [array[0] lottery_day];
             [weakSelf.lotteryArr insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, array.count)]];
