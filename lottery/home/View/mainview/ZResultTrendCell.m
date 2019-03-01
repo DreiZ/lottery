@@ -137,13 +137,13 @@
                 [subTempLabel mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.centerY.equalTo(tempLabelContentView.mas_centerY);
                     make.centerX.equalTo(tempLabelContentView.mas_centerX);
-                    make.width.height.mas_equalTo(CGFloatIn750(20));
+                    make.width.height.mas_equalTo(CGFloatIn750(18));
                 }];
             }else{
                 [subTempLabel mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.centerY.equalTo(tempLabelContentView.mas_centerY);
                     make.centerX.equalTo(tempLabelContentView.mas_centerX);
-                    make.width.height.mas_equalTo(CGFloatIn750(20));
+                    make.width.height.mas_equalTo(CGFloatIn750(18));
                 }];
             }
             
@@ -275,13 +275,13 @@
     }];
     
     
-    UIView *rightLineView = [[UIView alloc] initWithFrame:CGRectZero];
-    rightLineView.backgroundColor = [UIColor blackColor];
-    [self.contentView addSubview:rightLineView];
-    [rightLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.right.bottom.equalTo(self);
-        make.width.mas_equalTo(0.5);
-    }];
+//    UIView *rightLineView = [[UIView alloc] initWithFrame:CGRectZero];
+//    rightLineView.backgroundColor = [UIColor blackColor];
+//    [self.contentView addSubview:rightLineView];
+//    [rightLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.right.bottom.equalTo(self);
+//        make.width.mas_equalTo(0.5);
+//    }];
     
 }
 
@@ -293,7 +293,7 @@
     tempLabel.text = title;
     tempLabel.numberOfLines = 0;
     tempLabel.textAlignment = NSTextAlignmentCenter;
-    [tempLabel setFont:[UIFont systemFontOfSize:CGFloatIn750(16) * [ZLotteryManager sharedManager].fontMultiple]];
+    [tempLabel setFont:[UIFont systemFontOfSize:CGFloatIn750(14) * [ZLotteryManager sharedManager].fontMultiple]];
     return tempLabel;
 }
 
@@ -367,11 +367,11 @@
     if ([[ZLotteryManager sharedManager] isDouble:model]) {
         UILabel *bigLabel = _labelArr[5][1];
         bigLabel.text = @"双";
-        bigLabel.textColor = kBlueColor;
+        bigLabel.textColor = kBlueCcColor;
     }else{
         UILabel *smallLabel = _labelArr[5][0];
         smallLabel.text = @"单";
-        smallLabel.textColor = kBlueColor;
+        smallLabel.textColor = kBlueCcColor;
     }
     
     NSInteger diffNum = [[ZLotteryManager sharedManager] diff:model];
@@ -401,6 +401,7 @@
     //颜色样式
     if ([model.lottert_serial_number integerValue] == 1) {
         _topLineView.hidden = NO;
+        _topLineView.backgroundColor = [UIColor blackColor];
     }else{
         _topLineView.hidden = YES;
     }
@@ -424,9 +425,9 @@
         
         diffNumLabel.textColor = kBlueColor;
     }else if ([[ZLotteryManager sharedManager] type:model] == 2){
-        num1Label.textColor = [UIColor redColor];
-        num2Label.textColor = [UIColor redColor];
-        num3Label.textColor = [UIColor redColor];
+        num1Label.textColor = kRedColor;
+        num2Label.textColor = kRedColor;
+        num3Label.textColor = kRedColor;
         
         
         
@@ -442,14 +443,14 @@
         for (NSString *num in spanArr) {
             UILabel *spanLabel = _labelArr[2][[num integerValue]-1];
             if ([num isEqualToString:index]) {
-                spanLabel.textColor = [UIColor redColor];
+                spanLabel.textColor = kRedColor;
             }else{
                 spanLabel.textColor = [UIColor blackColor];
             }
         }
         
-        andLabel.textColor = [UIColor redColor];
-        diffNumLabel.textColor = [UIColor redColor];
+        andLabel.textColor = kRedColor;
+        diffNumLabel.textColor = kRedColor;
     }else if ([[ZLotteryManager sharedManager] type:model] == 3){
         num1Label.textColor = [UIColor blackColor];
         num2Label.textColor = [UIColor blackColor];
@@ -461,7 +462,7 @@
             spanLabel.backgroundColor = kBlueCColor;
             spanLabel.textColor = [UIColor whiteColor];
             spanLabel.layer.masksToBounds = YES;
-            spanLabel.layer.cornerRadius = CGFloatIn750(10);
+            spanLabel.layer.cornerRadius = 5;
         }
     }else if ([[ZLotteryManager sharedManager] type:model] == 4){
         num1Label.textColor = [UIColor blackColor];
@@ -505,12 +506,12 @@
         CGMutablePathRef solidShapePath_3 =  CGPathCreateMutable();
         [solidShapeLayer_3 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:model] == 2) {
-            [solidShapeLayer_3 setStrokeColor:[[UIColor redColor] CGColor]];
+            [solidShapeLayer_3 setStrokeColor:[kRedColor CGColor]];
         }else{
             [solidShapeLayer_3 setStrokeColor:[[UIColor blackColor] CGColor]];
         }
         
-        solidShapeLayer_3.lineWidth = 1.0f ;
+        solidShapeLayer_3.lineWidth = 0.5f ;
         CGPathMoveToPoint(solidShapePath_3, NULL, before_and_x, -(cellHeight/2));
         CGPathAddLineToPoint(solidShapePath_3, NULL, now_and_x, (cellHeight/2));
         [solidShapeLayer_3 setPath:solidShapePath_3];
@@ -522,11 +523,11 @@
         CGMutablePathRef solidShapePath_6 =  CGPathCreateMutable();
         [solidShapeLayer_6 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:model] == 2) {
-            [solidShapeLayer_6 setStrokeColor:[[UIColor redColor] CGColor]];
+            [solidShapeLayer_6 setStrokeColor:[kRedColor CGColor]];
         }else{
             [solidShapeLayer_6 setStrokeColor:[[UIColor blackColor] CGColor]];
         }
-        solidShapeLayer_6.lineWidth = 1.0f ;
+        solidShapeLayer_6.lineWidth = 0.5f ;
         CGPathMoveToPoint(solidShapePath_6, NULL, before_diff_x, -(cellHeight/2));
         CGPathAddLineToPoint(solidShapePath_6, NULL, now_diff_x, (cellHeight/2));
         [solidShapeLayer_6 setPath:solidShapePath_6];
@@ -559,12 +560,12 @@
         CGMutablePathRef solidShapePath_a3 =  CGPathCreateMutable();
         [solidShapeLayer_a3 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:after] == 2) {
-            [solidShapeLayer_a3 setStrokeColor:[[UIColor redColor] CGColor]];
+            [solidShapeLayer_a3 setStrokeColor:[kRedColor CGColor]];
         }else{
             [solidShapeLayer_a3 setStrokeColor:[[UIColor blackColor] CGColor]];
         }
         
-        solidShapeLayer_a3.lineWidth = 1.0f ;
+        solidShapeLayer_a3.lineWidth = 0.5f ;
 
         CGPathMoveToPoint(solidShapePath_a3, NULL, now_and_x, (cellHeight/2) );
         CGPathAddLineToPoint(solidShapePath_a3, NULL, after_and_x,cellHeight + (cellHeight/2));
@@ -580,11 +581,11 @@
         CGMutablePathRef solidShapePath_a6 =  CGPathCreateMutable();
         [solidShapeLayer_a6 setFillColor:[[UIColor clearColor] CGColor]];
         if ([[ZLotteryManager sharedManager] type:after] == 2) {
-            [solidShapeLayer_a6 setStrokeColor:[[UIColor redColor] CGColor]];
+            [solidShapeLayer_a6 setStrokeColor:[kRedColor CGColor]];
         }else{
             [solidShapeLayer_a6 setStrokeColor:[[UIColor blackColor] CGColor]];
         }
-        solidShapeLayer_a6.lineWidth = 1.0f ;
+        solidShapeLayer_a6.lineWidth = 0.5f ;
 
         CGPathMoveToPoint(solidShapePath_a6, NULL, now_diff_x, (cellHeight/2));
         CGPathAddLineToPoint(solidShapePath_a6, NULL, after_diff_x, cellHeight + (cellHeight/2));
@@ -603,11 +604,11 @@
     _3Label.backgroundColor = andLabel.backgroundColor;
     _3Label.tag = 123456;
     _3Label.textAlignment = NSTextAlignmentCenter   ;
-    [_3Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(16)]];
+    [_3Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(14)]];
     [self.contentView addSubview:_3Label];
     [_3Label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(andLabel);
-        make.height.width.mas_equalTo(CGFloatIn750(16));
+        make.height.width.mas_equalTo(CGFloatIn750(14));
     }];
 
     UILabel *_6Label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -616,37 +617,17 @@
     _6Label.backgroundColor = diffNumLabel.backgroundColor;
     _6Label.tag = 123456;
     _6Label.textAlignment = NSTextAlignmentCenter ;
-    [_6Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(16)]];
+    [_6Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(14)]];
     [self.contentView addSubview:_6Label];
     [_6Label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(diffNumLabel);
-        make.height.width.mas_equalTo(CGFloatIn750(16));
+        make.height.width.mas_equalTo(CGFloatIn750(14));
     }];
 }
 
-
-/**
- *  计算角度 x轴夹角
- *  @param edge 线
- *  @return 角度
- */
--(CGFloat)angleForStartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
-    
-    CGPoint Xpoint = CGPointMake(startPoint.x + 100, startPoint.y);
-    
-    CGFloat a = endPoint.x - startPoint.x;
-    CGFloat b = endPoint.y - startPoint.y;
-    CGFloat c = Xpoint.x - startPoint.x;
-    CGFloat d = Xpoint.y - startPoint.y;
-    
-    CGFloat rads = acos(((a*c) + (b*d)) / ((sqrt(a*a + b*b)) * (sqrt(c*c + d*d))));
-    
-    if (startPoint.y>endPoint.y) {
-        rads = -rads;
-    }
-    return rads;
+- (void)setFirstLine {
+    _topLineView.backgroundColor = [UIColor colorWithHexString:@"bbbbbb"];
 }
-
 + (CGFloat)getCellHeight:(id)sender {
     return cellHeight;
 }

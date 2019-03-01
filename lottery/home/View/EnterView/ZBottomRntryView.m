@@ -38,7 +38,7 @@
     }];
     
     UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectZero];
-    bottomLineView.backgroundColor = [UIColor blackColor];
+    bottomLineView.backgroundColor = KContentBackColor;
     [contView addSubview:bottomLineView];
     [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self);
@@ -50,7 +50,7 @@
     titleLabel.text = @"开奖：";
     titleLabel.numberOfLines = 0;
     titleLabel.textAlignment = NSTextAlignmentLeft;
-    [titleLabel setFont:[UIFont systemFontOfSize:13.0f * [ZLotteryManager sharedManager].fontMultiple]];
+    [titleLabel setFont:[UIFont systemFontOfSize:12.0f * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(contView.mas_left).offset(8);
@@ -88,7 +88,7 @@
     sureBtn.layer.borderWidth = 1;
     [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
     [sureBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [sureBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
+    [sureBtn.titleLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:sureBtn];
     [sureBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(40);
@@ -105,7 +105,7 @@
     cutBtn.layer.borderWidth = 1;
     [cutBtn setTitle:@"截屏" forState:UIControlStateNormal];
     [cutBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [cutBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
+    [cutBtn.titleLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:cutBtn];
     [cutBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(40);
@@ -122,7 +122,7 @@
     hiddenBtn.layer.borderWidth = 1;
     [hiddenBtn setTitle:@"隐藏" forState:UIControlStateNormal];
     [hiddenBtn setTitleColor:kLineColor forState:UIControlStateNormal];
-    [hiddenBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
+    [hiddenBtn.titleLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:hiddenBtn];
     [hiddenBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(40);
@@ -139,7 +139,7 @@
     clearBtn.layer.borderWidth = 1;
     [clearBtn setTitle:@"清空" forState:UIControlStateNormal];
     [clearBtn setTitleColor:kLineColor forState:UIControlStateNormal];
-    [clearBtn.titleLabel setFont:[UIFont systemFontOfSize:14 * [ZLotteryManager sharedManager].fontMultiple]];
+    [clearBtn.titleLabel setFont:[UIFont systemFontOfSize:13 * [ZLotteryManager sharedManager].fontMultiple]];
     [contView addSubview:clearBtn];
     [clearBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(40);

@@ -16,7 +16,7 @@
 @property (nonatomic,strong) ZLotteryModel *afterModel;
 
 - (void)setModel:(ZLotteryModel *)model before:(ZLotteryModel *)before after:(ZLotteryModel *)after;
-
+- (void)setFirstLine;
 + (instancetype)cellWithTableView:(UITableView *)tableView ;
 + (CGFloat)getCellHeight:(id)sender ;
 @end

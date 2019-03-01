@@ -48,11 +48,15 @@
 
 #define kBlackColor [UIColor colorWithHexString:@"000000"]
 
-#define kPurpleColor [UIColor colorWithHexString:@"551179"]
+#define kPurpleColor [UIColor colorWithHexString:@"48164B"]
 
-#define kBlueColor [UIColor colorWithHexString:@"140f78"]
+#define kBlueColor [UIColor colorWithHexString:@"080075"]
 
-#define kBlueCColor [UIColor colorWithHexString:@"1265a0"]
+#define kRedColor [UIColor colorWithHexString:@"C21415"]
+
+#define kBlueCColor [UIColor colorWithHexString:@"026697"]
+
+#define kBlueCcColor [UIColor colorWithHexString:@"03056A"]
 
 #define UnitWidth  (1/36.0f)
 #define cellHeight  (CGFloatIn750(28.0f))

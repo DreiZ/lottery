@@ -47,15 +47,15 @@
     [self addSubview:self.titleView];
     [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(kStatusBarHeight);
-        make.left.equalTo(self.mas_left).offset(1);
-        make.right.equalTo(self.mas_right).offset(-1);
+        make.left.equalTo(self.mas_left).offset(0);
+        make.right.equalTo(self.mas_right).offset(-2);
         make.height.mas_equalTo(CGFloatIn750(64));
     }];
     
     [self addSubview:self.iTableView];
     [self.iTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self);
-        make.left.equalTo(self.mas_left).offset(1);
+        make.left.equalTo(self.mas_left).offset(0);
         make.right.equalTo(self.mas_right).offset(-1);
         make.top.equalTo(self.titleView.mas_bottom);
     }];
@@ -107,7 +107,7 @@
                 // Fallback on earlier versions
             }
         }
-        UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
+        UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5)];
         bottomLineView.backgroundColor = [UIColor blackColor];
         
         _iTableView.tableFooterView = bottomLineView;
@@ -165,8 +165,12 @@
         after = _lotteryArr[indexPath.row + 1];
     }
     
+    
     [cell setModel:_lotteryArr[indexPath.row] before:before after:after];
     
+    if (indexPath.row == 0) {
+        [cell setFirstLine];
+    }
     return cell;
 }
 

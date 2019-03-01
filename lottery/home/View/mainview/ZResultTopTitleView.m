@@ -69,7 +69,7 @@
         make.width.equalTo(self.mas_width).multipliedBy(UnitWidth);
         make.left.equalTo(self.mas_left).offset(0.5);
         make.top.equalTo(self.mas_top).offset(0.5);
-        make.bottom.equalTo(self.mas_bottom).offset(-0.5);
+        make.bottom.equalTo(self.mas_bottom);
     }];
     
     
@@ -81,14 +81,14 @@
         if (tempView) {
             [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.width.equalTo(self.mas_width).multipliedBy([self.widthArr[i] doubleValue]);
-                make.bottom.equalTo(self.mas_bottom).offset(-0.5);
+                make.bottom.equalTo(self.mas_bottom);
                 make.left.equalTo(tempView.mas_right).offset(0.5);
                 make.top.equalTo(self.mas_top).offset(0.5);
             }];
         }else{
             [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.width.equalTo(self.mas_width).multipliedBy([self.widthArr[i] doubleValue]);
-                make.bottom.equalTo(self.mas_bottom).offset(-0.5);
+                make.bottom.equalTo(self.mas_bottom);
                 make.left.equalTo(titleLabel.mas_right).offset(0.5);
                 make.top.equalTo(self.mas_top).offset(0.5);
             }];
@@ -100,7 +100,7 @@
         
         [tempLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(contentView);
-            make.bottom.equalTo(contentView.mas_centerY);
+            make.bottom.equalTo(contentView.mas_centerY).offset(-0.5);
             make.left.equalTo(contentView.mas_left);
             make.right.equalTo(contentView.mas_right);
         }];
@@ -112,18 +112,18 @@
         UIView *subTempView = nil;
         for (int j = 0; j < subArr.count; j++) {
             UILabel *subTempLabel = [self getLabel:subArr[j] titleColor:[UIColor blackColor] backGroundColor:[UIColor whiteColor]];
-            subTempLabel.font = [UIFont boldSystemFontOfSize:CGFloatIn750(16) * [ZLotteryManager sharedManager].fontMultiple];
+            subTempLabel.font = [UIFont boldSystemFontOfSize:CGFloatIn750(15) * [ZLotteryManager sharedManager].fontMultiple];
             [contentView addSubview:subTempLabel];
             if (subTempView) {
                 [subTempLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.bottom.equalTo(self);
+                    make.bottom.equalTo(contentView);
                     make.top.equalTo(self.mas_centerY).offset(0.5);
                     make.left.equalTo(subTempView.mas_right).offset(0.5);
                     make.width.equalTo(contentView.mas_width).multipliedBy(1.0f/subArr.count).offset(-0.5);
                 }];
             }else{
                 [subTempLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.bottom.equalTo(self);
+                    make.bottom.equalTo(contentView);
                     make.left.equalTo(contentView.mas_left);
                     make.top.equalTo(self.mas_centerY).offset(0.5);
                     make.width.equalTo(contentView.mas_width).multipliedBy(1.0f/subArr.count);
@@ -143,25 +143,25 @@
         make.height.mas_equalTo(0.5);
     }];
     
-    UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectZero];
-    bottomLineView.backgroundColor = [UIColor blackColor];
-    [self addSubview:bottomLineView];
-    [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self);
-        make.height.mas_equalTo(0.5);
-    }];
+//    UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectZero];
+//    bottomLineView.backgroundColor = kLineColor;
+//    [self addSubview:bottomLineView];
+//    [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.bottom.equalTo(self);
+//        make.height.mas_equalTo(0.5);
+//    }];
     
-    UIView *leftLineView = [[UIView alloc] initWithFrame:CGRectZero];
-    leftLineView.backgroundColor = [UIColor blackColor];
-    [self addSubview:leftLineView];
-    [leftLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.top.equalTo(self);
-        make.width.mas_equalTo(0.5);
-    }];
-    
+//    UIView *leftLineView = [[UIView alloc] initWithFrame:CGRectZero];
+//    leftLineView.backgroundColor = [UIColor blackColor];
+//    [self addSubview:leftLineView];
+//    [leftLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.bottom.top.equalTo(self);
+//        make.width.mas_equalTo(0.5);
+//    }];
+//    
     
     UIView *rightLineView = [[UIView alloc] initWithFrame:CGRectZero];
-    rightLineView.backgroundColor = [UIColor blackColor];
+    rightLineView.backgroundColor = [UIColor whiteColor];
     [self addSubview:rightLineView];
     [rightLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.right.top.equalTo(self);

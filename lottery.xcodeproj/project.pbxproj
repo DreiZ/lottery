@@ -34,6 +34,7 @@
 		6841190C22250D0200EE4E82 /* ZRightToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6841190B22250D0200EE4E82 /* ZRightToolsView.m */; };
 		6841190F22250D5A00EE4E82 /* ZResultTrendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6841190E22250D5A00EE4E82 /* ZResultTrendView.m */; };
 		68411912222518CF00EE4E82 /* ZResultTopTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68411911222518CF00EE4E82 /* ZResultTopTitleView.m */; };
+		68E4C0B62228CEF5001006BA /* ZResultSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E4C0B52228CEF5001006BA /* ZResultSpaceCell.m */; };
 		7DABC99AE3374F0F410BA342 /* libPods-lottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A395F6544E8FA8177CF7F1 /* libPods-lottery.a */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,8 @@
 		6841190E22250D5A00EE4E82 /* ZResultTrendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZResultTrendView.m; sourceTree = "<group>"; };
 		68411910222518CF00EE4E82 /* ZResultTopTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZResultTopTitleView.h; sourceTree = "<group>"; };
 		68411911222518CF00EE4E82 /* ZResultTopTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZResultTopTitleView.m; sourceTree = "<group>"; };
+		68E4C0B42228CEF5001006BA /* ZResultSpaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZResultSpaceCell.h; sourceTree = "<group>"; };
+		68E4C0B52228CEF5001006BA /* ZResultSpaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZResultSpaceCell.m; sourceTree = "<group>"; };
 		95A395F6544E8FA8177CF7F1 /* libPods-lottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFE73BAF12F7E8484D04443 /* Pods-lottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-lottery/Pods-lottery.release.xcconfig"; sourceTree = "<group>"; };
 		F50904A51662D32FB548940D /* Pods-lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lottery/Pods-lottery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				68411911222518CF00EE4E82 /* ZResultTopTitleView.m */,
 				6834D8C922262C750072F593 /* ZResultTrendCell.h */,
 				6834D8CA22262C750072F593 /* ZResultTrendCell.m */,
+				68E4C0B42228CEF5001006BA /* ZResultSpaceCell.h */,
+				68E4C0B52228CEF5001006BA /* ZResultSpaceCell.m */,
 			);
 			path = mainview;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				5E5D896420E20F130096536C /* AppDelegate.m in Sources */,
 				5E5D89AA20E223A90096536C /* ZBaseViewController.m in Sources */,
 				5E50259120EB4964000D02EA /* NSArray+LYNil.m in Sources */,
+				68E4C0B62228CEF5001006BA /* ZResultSpaceCell.m in Sources */,
 				5E50259420EB4964000D02EA /* NSMutableDictionary+LYNil.m in Sources */,
 				5E5D89A120E21FA00096536C /* ZBaseModel.m in Sources */,
 				68411912222518CF00EE4E82 /* ZResultTopTitleView.m in Sources */,
