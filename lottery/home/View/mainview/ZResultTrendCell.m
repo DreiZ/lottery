@@ -247,7 +247,7 @@
             if (i == 0) {
                 [subTempLabel setFont:[UIFont systemFontOfSize:CGFloatIn750(13) * [ZLotteryManager sharedManager].fontMultiple]];
             }else{
-                [subTempLabel setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(16) * [ZLotteryManager sharedManager].fontMultiple]];
+                [subTempLabel setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(14) * [ZLotteryManager sharedManager].fontMultiple]];
                 
             }
             
@@ -294,6 +294,7 @@
     tempLabel.numberOfLines = 0;
     tempLabel.textAlignment = NSTextAlignmentCenter;
     [tempLabel setFont:[UIFont systemFontOfSize:CGFloatIn750(14) * [ZLotteryManager sharedManager].fontMultiple]];
+    tempLabel.adjustsFontSizeToFitWidth = YES;
     return tempLabel;
 }
 
@@ -604,11 +605,11 @@
     _3Label.backgroundColor = andLabel.backgroundColor;
     _3Label.tag = 123456;
     _3Label.textAlignment = NSTextAlignmentCenter   ;
-    [_3Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(14)]];
+    [_3Label setFont:diffNumLabel.font];
     [self.contentView addSubview:_3Label];
     [_3Label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(andLabel);
-        make.height.width.mas_equalTo(CGFloatIn750(14));
+        make.height.width.mas_equalTo(9);
     }];
 
     UILabel *_6Label = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -617,12 +618,14 @@
     _6Label.backgroundColor = diffNumLabel.backgroundColor;
     _6Label.tag = 123456;
     _6Label.textAlignment = NSTextAlignmentCenter ;
-    [_6Label setFont:[UIFont boldSystemFontOfSize:CGFloatIn750(14)]];
+    [_6Label setFont:diffNumLabel.font];
     [self.contentView addSubview:_6Label];
     [_6Label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(diffNumLabel);
-        make.height.width.mas_equalTo(CGFloatIn750(14));
+        make.height.width.mas_equalTo(9);
     }];
+    _6Label.adjustsFontSizeToFitWidth = YES;
+    _3Label.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setFirstLine {
